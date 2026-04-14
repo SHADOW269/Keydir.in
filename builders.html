@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>DIY Builders — KEYDIR.exe India</title>
+<meta name="description" content="Custom keyboard builders and DIY specialists in India — LVL3, Hawtkeys, Parix."/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.b-hero{padding:calc(var(--nav-h)+60px) 24px 60px;max-width:1380px;margin:0 auto}
+.b-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.b-title{font-family:var(--f-d);font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
+.b-title .outline{-webkit-text-stroke:3px var(--black);color:transparent}
+.b-sub{font-family:var(--f-m);font-size:.9rem;line-height:1.8;background:var(--yellow);border:2px solid var(--black);padding:14px 18px;box-shadow:var(--sh);transform:rotate(.4deg);display:inline-block;margin-bottom:2rem}
+/* Builder cards */
+.builder-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.builder-card{background:var(--cream);border:3px solid var(--black);box-shadow:var(--sh-lg);overflow:hidden;transition:transform .12s,box-shadow .12s;animation:card-in .4s ease both;display:flex;flex-direction:column}
+@keyframes card-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.builder-card:hover{transform:translate(4px,4px);box-shadow:4px 4px 0 #111}
+.builder-card-accent{height:8px;border-bottom:2px solid var(--black)}
+.builder-card-top{padding:28px 24px 20px;border-bottom:2px solid var(--black);flex:1}
+.builder-icon{
+  font-size:2rem;width:60px;height:60px;
+  border:2px solid var(--black);display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;box-shadow:var(--sh);
+}
+.builder-tag{font-family:var(--f-m);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border:2px solid var(--black);display:inline-block;margin-bottom:12px}
+.builder-name{font-family:var(--f-d);font-size:2.2rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;margin-bottom:8px}
+.builder-desc{font-family:var(--f-m);font-size:.82rem;line-height:1.75;color:#444}
+.builder-warning{display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px 12px;background:#fff0f0;border:2px solid var(--red);font-family:var(--f-m);font-size:.75rem;color:var(--red);line-height:1.5}
+.builder-card-bot{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:2px solid var(--black);background:rgba(0,0,0,.025)}
+.builder-stat{font-family:var(--f-m);font-size:.7rem;color:#777;text-transform:uppercase;letter-spacing:.06em}
+/* Info box */
+.info-box{background:var(--black);border:2px solid var(--black);box-shadow:var(--sh-lg);padding:28px;color:var(--cream)}
+.info-box-title{font-family:var(--f-m);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #222}
+.info-box p{font-family:var(--f-m);font-size:.82rem;line-height:1.9;color:#888}
+.info-box strong{color:var(--green)}
+.info-box a{color:var(--green);text-decoration:none}
+.info-box a:hover{text-decoration:underline}
+/* Feature strips */
+.feature-strip{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--black);box-shadow:var(--sh-lg);background:var(--cream)}
+.feature-strip-item{padding:28px 22px;border-right:2px solid var(--black)}
+.feature-strip-item:last-child{border-right:none}
+.fs-icon{font-size:1.75rem;margin-bottom:12px;display:block}
+.fs-title{font-family:var(--f-d);font-size:1rem;font-weight:800;text-transform:uppercase;margin-bottom:6px;letter-spacing:-.03em}
+.fs-desc{font-family:var(--f-m);font-size:.78rem;color:#555;line-height:1.7}
+@media(max-width:900px){.b-hero-grid{grid-template-columns:1fr}.builder-grid{grid-template-columns:1fr}.feature-strip{grid-template-columns:1fr}.feature-strip-item{border-right:none;border-bottom:2px solid var(--black)}.feature-strip-item:last-child{border-bottom:none}}
+</style>
+</head>
+<body>
+<div id="cursor"></div><div id="prog"></div>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">⌨ KEYDIR.exe</a>
+  <div class="nav-links">
+    <a href="index.html">_Home</a>
+    <a href="vendors.html">_Vendors</a>
+    <a href="builders.html">_Builders</a>
+    <a href="brands.html">_Brands</a>
+    <a href="marketplace.html">_Market</a>
+    <a href="about.html">_About</a>
+    <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--black);color:var(--cream)">_GitHub</a>
+  </div>
+  <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob-nav">
+  <button id="mob-close">[ X ]</button>
+  <a href="index.html">_Home</a>
+  <a href="vendors.html">_Vendors</a>
+  <a href="builders.html">_Builders</a>
+  <a href="brands.html">_Brands</a>
+  <a href="marketplace.html">_Market</a>
+  <a href="about.html">_About</a>
+</div>
+
+<!-- Hero -->
+<div class="b-hero">
+  <div class="b-hero-grid">
+    <div>
+      <div class="section-tag-label reveal"><span class="dot"></span> SPECIALIZED CRAFTSPEOPLE // <span data-stat="builders">3</span> BUILDERS</div>
+      <h1 class="b-title reveal" style="transition-delay:.06s">
+        DIY &amp;<br/><span class="outline">CUSTOM</span><br/>BUILDERS.
+      </h1>
+      <p class="b-sub reveal" style="transition-delay:.12s">
+        For enthusiasts who demand something unique.<br/>
+        <b>Artisan parts. Custom cables. Bespoke builds.</b>
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap" class="reveal" style="transition-delay:.18s">
+        <a href="vendors.html" class="btn-primary">← All Vendors</a>
+        <a href="brands.html" class="btn-secondary">Brand Stores →</a>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:.12s">
+      <div class="info-box">
+        <div class="info-box-title">// WHAT IS A DIY BUILDER?</div>
+        <p>DIY builders are <strong>specialized artisans</strong> focused on unique, custom keyboard components — not mass-produced gear.<br/><br/>
+        They offer things like <strong>custom coiled cables</strong>, <strong>artisan keycaps</strong>, <strong>lubing services</strong>, <strong>foam modding</strong>, and <strong>bespoke keyboard assembly</strong>.<br/><br/>
+        If you want your build to be genuinely one-of-a-kind, start here.<br/><br/>
+        Know a builder we missed? <a href="https://github.com/SHADOW269/Keyboard-Lab/issues" target="_blank">Open a GitHub issue →</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>CUSTOM CABLES</span><span class="sep">///</span><span>ARTISAN KEYCAPS</span><span class="sep">///</span><span>LUBING SERVICE</span><span class="sep">///</span><span>FOAM MODS</span><span class="sep">///</span><span>BESPOKE BUILDS</span><span class="sep">///</span><span>ENDGAME TIER</span><span class="sep">///</span><span>ONE OF A KIND</span><span class="sep">///</span>
+    <span>CUSTOM CABLES</span><span class="sep">///</span><span>ARTISAN KEYCAPS</span><span class="sep">///</span><span>LUBING SERVICE</span><span class="sep">///</span><span>FOAM MODS</span><span class="sep">///</span><span>BESPOKE BUILDS</span><span class="sep">///</span><span>ENDGAME TIER</span><span class="sep">///</span><span>ONE OF A KIND</span><span class="sep">///</span>
+  </div>
+</div>
+
+<!-- Builder cards -->
+<div class="page-body">
+  <section style="padding:60px 0 48px">
+    <div class="sec-head reveal">
+      <h2>THE <em style="color:var(--blue)">BUILDERS</em></h2>
+      <div class="sec-tag" style="color:var(--blue)"><span data-stat="builders">3</span> LISTED</div>
+    </div>
+    <div class="builder-grid" id="builderGrid"></div>
+  </section>
+
+  <!-- Feature strip -->
+  <section style="padding:0 0 80px">
+    <div class="sec-head reveal">
+      <h2>WHY <em style="color:var(--orange)">GO CUSTOM?</em></h2>
+    </div>
+    <div class="feature-strip reveal" style="transition-delay:.08s">
+      <div class="feature-strip-item">
+        <span class="fs-icon">🎯</span>
+        <div class="fs-title">Precision</div>
+        <div class="fs-desc">Custom builders obsess over details that mass manufacturers ignore — switch films, lubing consistency, PCB flex, sound dampening.</div>
+      </div>
+      <div class="feature-strip-item">
+        <span class="fs-icon">🇮🇳</span>
+        <div class="fs-title">Local Support</div>
+        <div class="fs-desc">Supporting Indian builders means faster turnarounds, no international shipping fees, and a growing local keyboard ecosystem.</div>
+      </div>
+      <div class="feature-strip-item">
+        <span class="fs-icon">⭐</span>
+        <div class="fs-title">Uniqueness</div>
+        <div class="fs-desc">Your build will be genuinely one-of-a-kind. No two custom boards are the same — that's the whole point.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:0 0 80px">
+    <div class="info-box reveal" style="display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap">
+      <div style="font-size:2rem;flex-shrink:0">💡</div>
+      <div>
+        <div class="info-box-title">// SUGGEST A BUILDER</div>
+        <p>This list is community-maintained. If you know a DIY builder or custom keyboard service in India not listed here, <a href="https://github.com/SHADOW269/Keyboard-Lab/issues/new" target="_blank">open a GitHub pull request</a> or issue. All submissions welcome.</p>
+        <a href="https://github.com/SHADOW269/Keyboard-Lab/issues/new" target="_blank" class="btn-secondary" style="margin-top:16px;display:inline-flex">Submit on GitHub →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="f-logo">⌨ KEYDIR.exe</div><div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads.</div></div>
+    <div class="f-col"><h4>Navigate</h4><ul>
+      <li><a href="index.html">_Home</a></li>
+      <li><a href="vendors.html">_Vendors</a></li>
+      <li><a href="builders.html">_Builders</a></li>
+      <li><a href="brands.html">_Brands</a></li>
+      <li><a href="marketplace.html">_Market</a></li>
+      <li><a href="about.html">_About</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Links</h4><ul>
+      <li><a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank">_GitHub</a></li>
+      <li><a href="https://github.com/SHADOW269/Keyboard-Lab/issues" target="_blank">_Report Issue</a></li>
+      <li><a href="https://github.com/SHADOW269/Keyboard-Lab/fork" target="_blank">_Fork</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Status</h4><ul>
+      <li><a href="#">Builders: <span data-stat="builders">3</span></a></li>
+      <li><a href="#">Last update: 2025</a></li>
+      <li><a href="#">Region: India 🇮🇳</a></li>
+    </ul></div>
+  </div>
+  <div class="f-copy">© 2025 KEYDIR // COMMUNITY PROJECT // NOT AFFILIATED // SYSTEM_END</div>
+  <div class="f-watermark">BUILD</div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+const BUILDER_ACCENT_COLS = ["var(--blue)", "var(--orange)", "var(--purple)", "var(--green)", "var(--pink)", "var(--cyan)"];
+const BUILDER_TAG_STYLES  = [
+  "background:var(--blue);color:#fff;border-color:var(--blue)",
+  "background:var(--orange);color:#fff;border-color:var(--orange)",
+  "background:var(--purple);color:#fff;border-color:var(--purple)",
+  "background:var(--green);color:#111;border-color:var(--green)",
+  "background:var(--pink);color:#fff;border-color:var(--pink)",
+  "background:var(--cyan);color:#111;border-color:var(--cyan)",
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const g = document.getElementById("builderGrid");
+  if (!g) return;
+
+  DIY_BUILDERS.forEach((b, i) => {
+    const accentCol = BUILDER_ACCENT_COLS[i % BUILDER_ACCENT_COLS.length];
+    const tagStyle  = BUILDER_TAG_STYLES[i % BUILDER_TAG_STYLES.length];
+
+    const card = document.createElement("div");
+    card.className = "builder-card reveal";
+    card.style.transitionDelay = `${i * 0.1}s`;
+
+    card.innerHTML = `
+      <div class="builder-card-accent" style="background:${accentCol}"></div>
+      <div class="builder-card-top">
+        <div class="builder-icon" style="background:${accentCol};color:#fff">${b.icon}</div>
+        <div class="builder-tag" style="${tagStyle}">${b.tag}</div>
+        <div class="builder-name">${b.name}</div>
+        <div class="builder-desc">${b.desc}</div>
+        ${b.warning && b.warning_message ? `<div class="builder-warning">⚠ ${b.warning_message}</div>` : ""}
+      </div>
+      <div class="builder-card-bot">
+        <div class="builder-stat">Specialist Builder</div>
+        <a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT STORE<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
+      </div>
+    `;
+    g.appendChild(card);
+
+    setTimeout(() => {
+      const io = new IntersectionObserver(en => {
+        en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: .08 });
+      io.observe(card);
+    }, 0);
+  });
+});
+</script>
+</body>
+</html>
