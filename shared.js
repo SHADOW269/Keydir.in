@@ -8,7 +8,7 @@ const VENDORS = [
   {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Accessories","Mouse"]},
   {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",  cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Accessories","Mouse","Deskpad"]},
   {name:"Curiosity Caps", url:"https://curiositycaps.in/",    cats:["Keycaps","Accessories","Deskpad","PC Parts"]},
-  {name:"GenesisPC",      url:"https://www.genesispc.in/",    cats:["Pre-built","Split","Hall Effect","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad"]},
+  {name:"GenesisPC",      url:"https://www.genesispc.in/",    cats:["Pre-built","Hall Effect","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad"]},
   {name:"Hardwarecorpus", url:"https://hardwarecorpus.in/",   cats:["Pre-built","Hall Effect","Barebone","Keycaps","Accessories","Mouse"]},
   {name:"KeebsMod",       url:"https://www.keebsmod.com/",    cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
   {name:"Keychron India", url:"https://keychron.in/",         cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
