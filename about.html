@@ -155,7 +155,7 @@
     <a href="brands.html">_Brands</a>
     <a href="guide.html">_Guide</a>
     <a href="about.html" class="active">_About</a>
-    <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--dark-card-bg);color:#FFFCF0">_GitHub</a>
+    <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" style="background:var(--dark-card-bg);color:#FFFCF0">_GitHub</a>
   </div>
   <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
@@ -197,23 +197,23 @@
       <div class="sec-tag" style="color:#00FF6A">GITHUB</div>
     </div>
     <div class="repo-cards reveal" style="transition-delay:.08s">
-      <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" rel="noopener" class="repo-card">
+      <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener" class="repo-card">
         <div class="repo-card-icon">📦</div>
         <div>
           <div class="repo-card-label">Main Repository</div>
-          <div class="repo-card-name">Keyboard-Lab</div>
+          <div class="repo-card-name">Keydir.in</div>
         </div>
         <div class="repo-card-desc">The full source code for KeyDir India. Contains all vendor data, the frontend site, and contribution guidelines.</div>
-        <div class="repo-card-link">github.com/SHADOW269/Keyboard-Lab ↗</div>
+        <div class="repo-card-link">github.com/SHADOW269/Keydir.in ↗</div>
       </a>
-      <a href="https://github.com/SHADOW269/Keyboard-Lab/issues" target="_blank" rel="noopener" class="repo-card">
+      <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener" class="repo-card">
         <div class="repo-card-icon">🐛</div>
         <div>
           <div class="repo-card-label">Issues &amp; Requests</div>
           <div class="repo-card-name">Issues Page</div>
         </div>
         <div class="repo-card-desc">Report incorrect vendor info, suggest new stores to add, flag warnings, or request new features for the directory.</div>
-        <div class="repo-card-link">github.com/SHADOW269/Keyboard-Lab/issues ↗</div>
+        <div class="repo-card-link">github.com/SHADOW269/Keydir.in/issues ↗</div>
       </a>
     </div>
   </section>
@@ -288,13 +288,13 @@
           Anyone who submits a PR to add or update vendor data becomes a contributor. Edit a JSON file, open a pull request, and your GitHub avatar appears here automatically.
         </div>
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-          <a href="https://github.com/SHADOW269/Keyboard-Lab/fork" target="_blank" rel="noopener"
+          <a href="https://github.com/SHADOW269/Keydir.in/fork" target="_blank" rel="noopener"
              style="display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border:2px solid var(--border);background:var(--dark-card-bg);color:#FFFCF0;font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700;text-decoration:none;text-transform:uppercase;box-shadow:4px 4px 0 var(--shadow);transition:all .12s"
              onmouseenter="this.style.background='#111';this.style.color='#FAFF00'"
              onmouseleave="this.style.background='#111';this.style.color='#FFFCF0'">
             Fork the Repo →
           </a>
-          <a href="https://github.com/SHADOW269/Keyboard-Lab/issues/new" target="_blank" rel="noopener"
+          <a href="https://github.com/SHADOW269/Keydir.in/issues/new" target="_blank" rel="noopener"
              style="display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border:2px solid var(--border);background:transparent;color:#111;font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700;text-decoration:none;text-transform:uppercase;box-shadow:4px 4px 0 var(--shadow);transition:all .12s"
              onmouseenter="this.style.transform='translate(2px,2px)';this.style.boxShadow='2px 2px 0 #111'"
              onmouseleave="this.style.transform='';this.style.boxShadow='4px 4px 0 #111'">
@@ -327,10 +327,10 @@
     <div class="f-col">
       <h4>Contribute</h4>
       <ul>
-        <li><a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank">_GitHub Repo</a></li>
-        <li><a href="https://github.com/SHADOW269/Keyboard-Lab/issues" target="_blank">_Report Issue</a></li>
-        <li><a href="https://github.com/SHADOW269/Keyboard-Lab/fork" target="_blank">_Fork</a></li>
-        <li><a href="https://github.com/SHADOW269/Keyboard-Lab/pulls" target="_blank">_Pull Requests</a></li>
+        <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub Repo</a></li>
+        <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank">_Report Issue</a></li>
+        <li><a href="https://github.com/SHADOW269/Keydir.in/fork" target="_blank">_Fork</a></li>
+        <li><a href="https://github.com/SHADOW269/Keydir.in/pulls" target="_blank">_Pull Requests</a></li>
       </ul>
     </div>
     <div class="f-col">
@@ -359,7 +359,7 @@
 (async function loadContributors() {
   const grid = document.getElementById('contributorsGrid');
   const tag  = document.getElementById('contribTag');
-  const API  = 'https://api.github.com/repos/SHADOW269/Keyboard-Lab/contributors';
+  const API  = 'https://api.github.com/repos/SHADOW269/Keydir.in/contributors';
 
   try {
     const res = await fetch(API, {
@@ -425,7 +425,7 @@
     grid.innerHTML = `
       <div class="contrib-error">
         ⚠ Could not load contributors from GitHub API.<br/>
-        <span style="font-size:.75rem;color:var(--text-dim)">Rate limit or network error. <a href="https://github.com/SHADOW269/Keyboard-Lab/graphs/contributors" target="_blank" style="color:#FF2A2A">View on GitHub →</a></span>
+        <span style="font-size:.75rem;color:var(--text-dim)">Rate limit or network error. <a href="https://github.com/SHADOW269/Keydir.in/graphs/contributors" target="_blank" style="color:#FF2A2A">View on GitHub →</a></span>
       </div>
     `;
     if (tag) tag.textContent = 'SEE GITHUB';
