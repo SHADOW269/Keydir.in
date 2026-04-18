@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>KEYDIR.in —India Mechanical Keyboard Directory</title>
-<link rel="shortcut icon" href="IMAGES/mkd-logo.png" type="image/x-icon" onerror="this.href='https://placehold.co/32x32/8300FE/FFFFFF?text=CE'">
-<meta name="description" content="India’s mechanical keyboard directory. Discover keyboard vendors, custom builders, switches, keycaps, accessories, and group buys across India — fast and community-powered."/>
-<link rel="stylesheet" href="style.css"/>
-<link rel="shortcut icon" href="IMAGES/mkd-logo.png" type="image/x-icon">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KEYDIR.in — India Mechanical Keyboard Directory</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="India’s mechanical keyboard directory. Discover vendors, custom builders, switches, keycaps, accessories, and group buys across India — fast, raw, and community-powered.">
 <link rel="canonical" href="https://keydir.in/">
+
+<!-- Favicon (Google Search logo) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Theme color (mobile browser branding) -->
+<meta name="theme-color" content="#000000">
+
+<!-- Open Graph (Discord / WhatsApp / Twitter preview) -->
+<meta property="og:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
+<meta property="og:description" content="Find keyboard vendors, builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
+<meta property="og:url" content="https://keydir.in/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://keydir.in/favicon.png">
+
+<!-- Twitter preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
+<meta name="twitter:description" content="India’s mechanical keyboard directory for vendors, builders, switches, keycaps, and accessories.">
+<meta name="twitter:image" content="https://keydir.in/favicon.png">
+
+<!-- Google logo schema (helps search result branding) -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "KEYDIR.in",
+ "url": "https://keydir.in",
+ "logo": "https://keydir.in/favicon.png"
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 <style>
 /* ── Home-specific ── */
 .hero-wrap{
@@ -18,9 +55,9 @@
 .hero-grid{display:grid;grid-template-columns:1fr 340px;align-items:center;gap:60px;padding:60px 0}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
-  background:var(--black);color:var(--yellow);
+  background:var(--border);color:var(--yellow);
   font-family:var(--f-m);font-size:.75rem;font-weight:700;
-  padding:7px 16px;border:2px solid var(--black);margin-bottom:2rem;
+  padding:7px 16px;border:2px solid var(--border);margin-bottom:2rem;
   letter-spacing:.08em;text-transform:uppercase;
   animation:fade-up .6s ease both;
 }
@@ -33,20 +70,20 @@
   text-transform:uppercase;margin-bottom:1.5rem;
   animation:fade-up .65s .08s ease both;
 }
-.hero-title .outline{-webkit-text-stroke:4px var(--black);color:transparent}
+.hero-title .outline{-webkit-text-stroke:4px var(--text);color:transparent}
 .hero-sub{
   font-family:var(--f-m);font-size:1rem;line-height:1.75;
-  background:var(--yellow);border:2px solid var(--black);
+  background:var(--yellow);border:2px solid var(--border);
   padding:16px 20px;box-shadow:var(--sh);
   transform:rotate(.5deg);max-width:520px;
   margin-bottom:2rem;
   animation:fade-up .65s .16s ease both;
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:2.5rem;animation:fade-up .65s .22s ease both}
-.hero-stats{display:flex;gap:14px;flex-wrap:wrap;animation:fade-up .65s .28s ease both}
+.hero-stats{display:flex;gap:10px;flex-wrap:wrap;animation:fade-up .65s .28s ease both}
 /* Terminal card */
 .terminal{
-  background:var(--black);border:3px solid var(--black);
+  background:var(--border);border:3px solid var(--border);
   box-shadow:var(--sh-xl);padding:24px;
   font-family:var(--f-m);font-size:.82rem;line-height:2;color:var(--green);
 }
@@ -66,12 +103,12 @@
 /* Feature grid */
 .feat-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  border:2px solid var(--black);box-shadow:var(--sh-lg);
-  background:var(--cream);
+  border:2px solid var(--border);box-shadow:var(--sh-lg);
+  background:var(--surface);
 }
 .feat-item{
-  padding:32px 24px;border-right:2px solid var(--black);
-  border-bottom:2px solid var(--black);
+  padding:32px 24px;border-right:2px solid var(--border);
+  border-bottom:2px solid var(--border);
   transition:all .12s;cursor:pointer;text-decoration:none;color:inherit;
   display:block;
 }
@@ -80,15 +117,15 @@
 .feat-item:hover{transform:translate(3px,3px);box-shadow:-3px -3px 0 #111 inset}
 .feat-icon{font-size:2rem;margin-bottom:14px;display:block}
 .feat-name{font-family:var(--f-d);font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:-.03em;margin-bottom:6px}
-.feat-desc{font-family:var(--f-m);font-size:.75rem;color:#555;line-height:1.7}
+.feat-desc{font-family:var(--f-m);font-size:.75rem;color:var(--text-muted);line-height:1.7}
 .feat-item:hover .feat-name{text-decoration:underline;text-underline-offset:4px}
 /* Category preview */
 .cat-preview-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .cat-prev-btn{
-  background:var(--cream);border:2px solid var(--black);
+  background:var(--surface);border:2px solid var(--border);
   padding:20px 12px;box-shadow:var(--sh);
   display:flex;flex-direction:column;align-items:center;gap:8px;
-  text-align:center;text-decoration:none;color:var(--black);
+  text-align:center;text-decoration:none;color:var(--border);
   transition:all .12s;
 }
 .cat-prev-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #111}
@@ -100,25 +137,25 @@
 .cat-prev-btn.cyan:hover{background:var(--cyan)}
 .cat-prev-btn.red:hover{background:var(--red);color:#fff}
 .cat-prev-btn.purple:hover{background:var(--purple);color:#fff}
-.cat-prev-btn.black:hover{background:var(--black);color:#fff}
+.cat-prev-btn.black:hover{background:var(--border);color:#fff}
 .cat-prev-btn.teal:hover{background:var(--teal);color:#fff}
 .cpb-icon{font-size:1.6rem}
 .cpb-lbl{font-family:var(--f-m);font-size:.7rem;font-weight:700;text-transform:uppercase}
 .cpb-count{font-family:var(--f-m);font-size:.63rem;color:#777}
 /* Stats section */
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--black);box-shadow:var(--sh-lg)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--border);box-shadow:var(--sh-lg)}
 .stat-item{
-  padding:36px 24px;border-right:2px solid var(--black);
-  background:var(--cream);text-align:center;
+  padding:36px 24px;border-right:2px solid var(--border);
+  background:var(--surface);text-align:center;color:var(--text);
 }
 .stat-item:last-child{border-right:none}
-.stat-item:nth-child(odd){background:var(--black);color:var(--cream)}
-.stat-item:nth-child(odd) .stat-lbl{color:#666}
+.stat-item:nth-child(odd){background:var(--dark-card-bg);color:var(--dark-card-text)}
+.stat-item:nth-child(odd) .stat-lbl{color:var(--dark-card-muted)}
 .stat-big{font-family:var(--f-m);font-size:3rem;font-weight:800;line-height:1;display:block}
-.stat-lbl{font-family:var(--f-m);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-top:6px;display:block}
+.stat-lbl{font-family:var(--f-m);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);margin-top:6px;display:block}
 /* CTA section */
 .cta-wrap{
-  background:var(--yellow);border:3px solid var(--black);
+  background:var(--cta-bg);border:3px solid var(--border);color:var(--cta-text);
   box-shadow:var(--sh-xl);padding:60px;position:relative;overflow:hidden;
 }
 .cta-wrap::before{
@@ -128,7 +165,7 @@
 }
 @media(max-width:1100px){.feat-grid{grid-template-columns:repeat(2,1fr)}.feat-item:nth-child(2n){border-right:none}}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px}.terminal{display:none}.stats-row{grid-template-columns:repeat(2,1fr)}.stat-item:nth-child(2){border-right:none}}
-@media(max-width:600px){.cat-preview-grid{grid-template-columns:repeat(2,1fr)}.feat-grid{grid-template-columns:1fr}.feat-item:nth-child(n){border-right:none}}
+@media(max-width:600px){.cat-preview-grid{grid-template-columns:repeat(2,1fr)}.feat-grid{grid-template-columns:1fr}.feat-item:nth-child(n){border-right:none}.hero-wrap{padding-left:16px;padding-right:16px}.hero-stats{gap:8px}.stat-box{min-width:80px;padding:12px 14px}.cta-wrap{padding:32px 20px}}
 </style>
 </head>
 <body>
@@ -144,7 +181,7 @@
     <a href="brands.html">_Brands</a>
     <a href="guide.html">_Guide</a>
     <a href="about.html">_About</a>
-    <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--black);color:var(--cream)">_GitHub</a>
+    <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--text);color:var(--bg)">_GitHub</a>
   </div>
   <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
@@ -187,7 +224,7 @@
       <div class="terminal">
         <div class="t-bar">
           <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
-          <span style="font-size:.7rem;color:#333;margin-left:8px">keydir_status.sh</span>
+          <span style="font-size:.7rem;color:var(--text-muted);margin-left:8px">keydir_status.sh</span>
         </div>
         <div class="t-line"><span class="t-prompt">$</span><span>./check_db --region=IN</span></div>
         <div class="t-line"><span class="t-ok">✓</span><span>vendors_loaded: <span data-stat="vendors">19</span></span></div>
@@ -222,22 +259,22 @@
       <div class="sec-tag" style="color:var(--green)">4 SECTIONS</div>
     </div>
     <div class="feat-grid reveal" style="transition-delay:.08s">
-      <a href="vendors.html" class="feat-item" style="background:var(--cream)">
+      <a href="vendors.html" class="feat-item" style="background:var(--surface)">
         <span class="feat-icon">🏪</span>
         <div class="feat-name">Vendor Directory</div>
         <div class="feat-desc"><span data-stat="vendors">19</span> verified vendors. Filter by category, search by name. Find exactly who stocks what you need.</div>
       </a>
-      <a href="builders.html" class="feat-item" style="background:var(--cream)">
+      <a href="builders.html" class="feat-item" style="background:var(--surface)">
         <span class="feat-icon">🔧</span>
         <div class="feat-name">DIY Builders</div>
         <div class="feat-desc">Custom cable makers, artisan key crafters, and bespoke build services for the discerning builder.</div>
       </a>
-      <a href="brands.html" class="feat-item" style="background:var(--cream)">
+      <a href="brands.html" class="feat-item" style="background:var(--surface)">
         <span class="feat-icon">🏢</span>
         <div class="feat-name">Brand Stores</div>
         <div class="feat-desc">Direct from manufacturer. Official India stores for Keychron, Redragon, TVS, and more.</div>
       </a>
-      <a href="marketplace.html" class="feat-item" style="background:var(--cream)">
+      <a href="marketplace.html" class="feat-item" style="background:var(--surface)">
         <span class="feat-icon">📦</span>
         <div class="feat-name">Marketplace</div>
         <div class="feat-desc">Amazon India and Flipkart — broad searches across all keyboard and peripheral categories.</div>
@@ -286,7 +323,7 @@
       <h2 style="font-family:var(--f-d);font-size:clamp(2.5rem,6vw,5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:.9;margin-bottom:1.5rem">
         Find Your Next<br/>Keyboard Part.
       </h2>
-      <p style="font-family:var(--f-m);font-size:.95rem;max-width:460px;margin-bottom:2rem;line-height:1.75;color:#333">
+      <p style="font-family:var(--f-m);font-size:.95rem;max-width:460px;margin-bottom:2rem;line-height:1.75;color:var(--cta-text-muted)">
         Pick a category. See every Indian vendor that carries it — instantly. No affiliate links. No ads. Pure signal.
       </p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -334,7 +371,13 @@
       </ul>
     </div>
   </div>
-  <div class="f-copy">© 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END</div>
+  <div class="f-bottom">
+    <div class="f-copy">© 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END</div>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <span class="tt-icon">◑</span>
+      <span class="tt-label">DARK MODE</span>
+    </button>
+  </div>
   <div class="f-watermark">KEYDIR</div>
 </footer>
 
@@ -355,6 +398,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
-
-India's #1 mechanical keyboard vendor directory

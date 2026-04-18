@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Beginner's Modding Guide — KEYDIR.in India</title>
-<meta name="description" content="New to mechanical keyboards? Learn about keyboard modding — lubing switches, foam mods, tape mod, gasket mounting and more. India's beginner guide."/>
-<link rel="stylesheet" href="style.css"/>
-<link rel="shortcut icon" href="IMAGES/mkd-logo.png" type="image/x-icon">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KEYDIR.in — India Mechanical Keyboard Directory</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="India’s mechanical keyboard directory. Discover vendors, custom builders, switches, keycaps, accessories, and group buys across India — fast, raw, and community-powered.">
+<link rel="canonical" href="https://keydir.in/">
+
+<!-- Favicon (Google Search logo) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Theme color (mobile browser branding) -->
+<meta name="theme-color" content="#000000">
+
+<!-- Open Graph (Discord / WhatsApp / Twitter preview) -->
+<meta property="og:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
+<meta property="og:description" content="Find keyboard vendors, builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
+<meta property="og:url" content="https://keydir.in/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://keydir.in/favicon.png">
+
+<!-- Twitter preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
+<meta name="twitter:description" content="India’s mechanical keyboard directory for vendors, builders, switches, keycaps, and accessories.">
+<meta name="twitter:image" content="https://keydir.in/favicon.png">
+
+<!-- Google logo schema (helps search result branding) -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "KEYDIR.in",
+ "url": "https://keydir.in",
+ "logo": "https://keydir.in/favicon.png"
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 <style>
 /* ── Guide hero ── */
 .g-hero{padding:calc(var(--nav-h) + 100px) 24px 80px;max-width:1380px;margin:0 auto}
 .g-title{font-family:var(--f-d);font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.g-title .outline{-webkit-text-stroke:3px var(--black);color:transparent}
-.g-sub{font-family:var(--f-m);font-size:.9rem;line-height:1.8;background:var(--green);border:2px solid var(--black);padding:14px 18px;box-shadow:var(--sh);transform:rotate(-.3deg);display:inline-block;margin-bottom:2rem;max-width:560px;color:var(--black)}
+.g-title .outline{-webkit-text-stroke:3px var(--text);color:transparent}
+.g-sub{font-family:var(--f-m);font-size:.9rem;line-height:1.8;background:var(--green);border:2px solid var(--border);padding:14px 18px;box-shadow:var(--sh);transform:rotate(-.3deg);display:inline-block;margin-bottom:2rem;max-width:560px;color:var(--border)}
 
 /* ── Table of contents ── */
-.toc{background:var(--black);border:2px solid var(--black);box-shadow:var(--sh-lg);padding:28px;margin-bottom:3rem}
+.toc{background:var(--border);border:2px solid var(--border);box-shadow:var(--sh-lg);padding:28px;margin-bottom:3rem}
 .toc-title{font-family:var(--f-m);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #222}
 .toc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .toc-item{
@@ -23,63 +62,63 @@
   color:var(--green);text-decoration:none;
   border:1px solid #222;transition:all .12s;text-transform:uppercase;
 }
-.toc-item:hover{background:var(--green);color:var(--black);border-color:var(--green)}
-.toc-item .toc-n{color:#444;flex-shrink:0;font-size:.65rem}
+.toc-item:hover{background:var(--green);color:var(--border);border-color:var(--green)}
+.toc-item .toc-n{color:var(--text-muted);flex-shrink:0;font-size:.65rem}
 
 /* ── Guide section ── */
 .guide-section{
-  border:2px solid var(--black);box-shadow:var(--sh-lg);
+  border:2px solid var(--border);box-shadow:var(--sh-lg);
   margin-bottom:2rem;overflow:hidden;
   animation:card-in .35s ease both;
 }
 @keyframes card-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .gs-header{
   display:flex;align-items:center;gap:16px;
-  padding:22px 28px;border-bottom:2px solid var(--black);
+  padding:22px 28px;border-bottom:2px solid var(--border);
   cursor:pointer;user-select:none;
   transition:background .12s;
 }
 .gs-header:hover{background:rgba(0,0,0,.04)}
 .gs-icon{
   font-size:1.6rem;width:52px;height:52px;
-  border:2px solid var(--black);display:flex;align-items:center;justify-content:center;
+  border:2px solid var(--border);display:flex;align-items:center;justify-content:center;
   flex-shrink:0;box-shadow:3px 3px 0 #111;transition:transform .12s;
 }
 .gs-header:hover .gs-icon{transform:rotate(-5deg)}
-.gs-num{font-family:var(--f-m);font-size:.62rem;font-weight:700;color:#aaa;letter-spacing:.1em;margin-bottom:3px}
+.gs-num{font-family:var(--f-m);font-size:.62rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;margin-bottom:3px}
 .gs-title{font-family:var(--f-d);font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.9}
 .gs-tag{
   font-family:var(--f-m);font-size:.62rem;font-weight:700;padding:3px 9px;
-  border:2px solid var(--black);text-transform:uppercase;letter-spacing:.06em;
+  border:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em;
   margin-left:auto;flex-shrink:0;
 }
-.gs-chevron{margin-left:8px;font-size:1.1rem;transition:transform .25s;flex-shrink:0;color:#aaa;font-family:var(--f-m);font-weight:800}
+.gs-chevron{margin-left:8px;font-size:1.1rem;transition:transform .25s;flex-shrink:0;color:var(--text-dim);font-family:var(--f-m);font-weight:800}
 .guide-section.open .gs-chevron{transform:rotate(180deg)}
 .gs-body{
   display:none;padding:28px;
-  background:var(--cream);
+  background:var(--surface);
 }
 .guide-section.open .gs-body{display:block;animation:fade-in .25s ease}
 @keyframes fade-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.gs-desc{font-family:var(--f-m);font-size:.85rem;line-height:1.9;color:#444;margin-bottom:1.5rem}
-.gs-desc strong{color:var(--black)}
-.gs-desc a{color:var(--black);font-weight:700}
+.gs-desc{font-family:var(--f-m);font-size:.85rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.5rem}
+.gs-desc strong{color:var(--border)}
+.gs-desc a{color:var(--border);font-weight:700}
 
 /* ── Step list ── */
 .steps{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:1.5rem}
 .step{
   display:flex;gap:14px;align-items:flex-start;
-  padding:14px 16px;border:2px solid var(--black);background:var(--cream);
+  padding:14px 16px;border:2px solid var(--border);background:var(--surface);
   box-shadow:3px 3px 0 #111;
 }
 .step-n{
   font-family:var(--f-m);font-size:.7rem;font-weight:800;
-  min-width:28px;height:28px;border:2px solid var(--black);
+  min-width:28px;height:28px;border:2px solid var(--border);
   display:flex;align-items:center;justify-content:center;
-  background:var(--black);color:var(--cream);flex-shrink:0;
+  background:var(--border);color:var(--surface);flex-shrink:0;
 }
 .step-text{font-family:var(--f-m);font-size:.82rem;line-height:1.75;color:#333}
-.step-text strong{color:var(--black)}
+.step-text strong{color:var(--border)}
 
 /* ── Difficulty badge ── */
 .diff-easy{background:var(--green);color:#111}
@@ -91,14 +130,14 @@
 .tools-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
 .tool-pill{
   font-family:var(--f-m);font-size:.72rem;font-weight:700;
-  padding:5px 12px;border:2px solid var(--black);background:var(--cream);
+  padding:5px 12px;border:2px solid var(--border);background:var(--surface);
   display:flex;align-items:center;gap:5px;
 }
 .tool-pill .t-icon{font-size:.9rem}
 
 /* ── Pro tip box ── */
 .pro-tip{
-  background:var(--yellow);border:2px solid var(--black);
+  background:var(--yellow);border:2px solid var(--border);
   padding:16px 18px;box-shadow:3px 3px 0 #111;
   display:flex;gap:12px;align-items:flex-start;margin-bottom:1.5rem;
 }
@@ -117,17 +156,17 @@
 
 /* ── Glossary grid ── */
 .glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.glos-card{background:var(--cream);border:2px solid var(--black);box-shadow:3px 3px 0 #111;padding:16px 18px}
+.glos-card{background:var(--surface);border:2px solid var(--border);box-shadow:3px 3px 0 #111;padding:16px 18px}
 .glos-term{font-family:var(--f-d);font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:-.03em;margin-bottom:4px}
-.glos-def{font-family:var(--f-m);font-size:.78rem;color:#555;line-height:1.7}
+.glos-def{font-family:var(--f-m);font-size:.78rem;color:var(--text-muted);line-height:1.7}
 
 /* ── Quick start card ── */
 .quickstart{
-  background:var(--black);border:2px solid var(--black);box-shadow:var(--sh-xl);
-  padding:36px;margin-bottom:3rem;color:var(--cream);
+  background:var(--border);border:2px solid var(--border);box-shadow:var(--sh-xl);
+  padding:36px;margin-bottom:3rem;color:var(--surface);
 }
 .qs-title{font-family:var(--f-d);font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:.5rem}
-.qs-sub{font-family:var(--f-m);font-size:.82rem;color:#666;line-height:1.8;margin-bottom:1.5rem}
+.qs-sub{font-family:var(--f-m);font-size:.82rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem}
 .qs-path{display:flex;align-items:center;flex-wrap:wrap;gap:0}
 .qs-step{
   font-family:var(--f-m);font-size:.78rem;font-weight:700;
@@ -136,43 +175,44 @@
 }
 .qs-step.qs-highlight{background:var(--yellow);color:#111;border-color:var(--yellow)}
 .qs-step.qs-green{background:var(--green);color:#111;border-color:var(--green)}
-.qs-arrow{color:#444;font-family:var(--f-m);font-weight:800;font-size:1.1rem;padding:0 6px}
+.qs-arrow{color:var(--text-muted);font-family:var(--f-m);font-weight:800;font-size:1.1rem;padding:0 6px}
 
 /* ── Keyboard type intro cards ── */
 .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:3rem}
-.type-card{background:var(--cream);border:2px solid var(--black);box-shadow:var(--sh);overflow:hidden}
-.type-card-head{height:7px;border-bottom:2px solid var(--black)}
+.type-card{background:var(--surface);border:2px solid var(--border);box-shadow:var(--sh);overflow:hidden}
+.type-card-head{height:7px;border-bottom:2px solid var(--border)}
 .type-card-body{padding:20px}
 .type-icon{font-size:2rem;margin-bottom:10px;display:block}
 .type-name{font-family:var(--f-d);font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:6px}
-.type-desc{font-family:var(--f-m);font-size:.78rem;color:#555;line-height:1.7}
+.type-desc{font-family:var(--f-m);font-size:.78rem;color:var(--text-muted);line-height:1.7}
 
 /* ── Typing practice & community links ── */
 .practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:2rem}
 .practice-card{
-  background:var(--cream);border:2px solid var(--black);box-shadow:var(--sh);
-  padding:18px;text-decoration:none;color:var(--black);
+  background:var(--surface);border:2px solid var(--border);box-shadow:var(--sh);
+  padding:18px;text-decoration:none;color:var(--border);
   display:flex;flex-direction:column;gap:6px;
   transition:transform .12s,box-shadow .12s;
 }
 .practice-card:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111;background:var(--yellow)}
 .practice-icon{font-size:1.4rem;margin-bottom:4px}
 .practice-name{font-family:var(--f-d);font-size:.95rem;font-weight:800;text-transform:uppercase;letter-spacing:-.03em}
-.practice-desc{font-family:var(--f-m);font-size:.72rem;color:#555;line-height:1.6}
+.practice-desc{font-family:var(--f-m);font-size:.72rem;color:var(--text-muted);line-height:1.6}
 .practice-card:hover .practice-desc{color:#333}
 .community-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:2rem}
 .community-card{
   display:flex;align-items:center;gap:18px;padding:22px 24px;
-  border:2px solid var(--black);box-shadow:var(--sh-lg);
-  text-decoration:none;color:var(--black);
+  border:2px solid var(--border);box-shadow:var(--sh-lg);
+  text-decoration:none;color:var(--border);
   transition:transform .12s,box-shadow .12s;
 }
 .community-card:hover{transform:translate(4px,4px);box-shadow:2px 2px 0 #111}
-.community-card-icon{font-size:2rem;width:54px;height:54px;border:2px solid var(--black);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.community-card-icon{font-size:2rem;width:54px;height:54px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .community-card-name{font-family:var(--f-d);font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;margin-bottom:4px}
 .community-card-desc{font-family:var(--f-m);font-size:.75rem;line-height:1.6}
-@media(max-width:860px){.toc-grid{grid-template-columns:1fr 1fr}.glossary-grid{grid-template-columns:1fr}.type-grid{grid-template-columns:1fr}}
-@media(max-width:580px){.toc-grid{grid-template-columns:1fr}.qs-path{flex-direction:column}}
+@media(max-width:860px){.toc-grid{grid-template-columns:1fr 1fr}.glossary-grid{grid-template-columns:1fr}.type-grid{grid-template-columns:1fr}.practice-grid{grid-template-columns:repeat(2,1fr)}.community-row{grid-template-columns:1fr}}
+@media(max-width:580px){.toc-grid{grid-template-columns:1fr}.qs-path{flex-direction:column}.practice-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.g-hero{padding-left:16px;padding-right:16px}}
 </style>
 </head>
 <body>
@@ -187,7 +227,7 @@
     <a href="brands.html">_Brands</a>
     <a href="guide.html" class="active">_Guide</a>
     <a href="about.html">_About</a>
-    <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--black);color:var(--cream)">_GitHub</a>
+    <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--text);color:var(--bg)">_GitHub</a>
   </div>
   <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
@@ -347,14 +387,14 @@
           <span class="pt-icon">💡</span>
           <div class="pt-text"><strong>Start here.</strong> Lubing stabs gives you the biggest bang for your buck. Even a cheap budget board sounds dramatically better with properly lubed stabs.</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// TOOLS NEEDED</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// TOOLS NEEDED</div>
         <div class="tools-row">
           <div class="tool-pill"><span class="t-icon">🪣</span> Krytox 205g0 or Dielectric grease</div>
           <div class="tool-pill"><span class="t-icon">🖌</span> Small paintbrush</div>
           <div class="tool-pill"><span class="t-icon">🔩</span> Small screwdriver</div>
           <div class="tool-pill"><span class="t-icon">🧤</span> Tweezers</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// STEPS</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// STEPS</div>
         <ol class="steps">
           <li class="step"><span class="step-n">1</span><span class="step-text">Remove the keycap and pop out the stabiliser wire from its housing. Most stabs clip out easily.</span></li>
           <li class="step"><span class="step-n">2</span><span class="step-text">Apply a <strong>thin layer</strong> of 205g0 inside both stab housings (the tube the stem sits in). Don't over-apply — less is more.</span></li>
@@ -366,7 +406,7 @@
           <span style="font-size:1rem;flex-shrink:0">⚠</span>
           <div class="wt-text"><strong>Don't use too much lube.</strong> Over-lubing stabs makes keys feel mushy and sluggish. A thin, even coat is all you need.</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.75rem;color:#777"><strong>Where to get lube in India:</strong> <a href="vendors.html" style="color:var(--black)">Meckeys, CtrlShiftStore, KeebsMod</a> all stock Krytox 205g0 and dielectric grease.</div>
+        <div style="font-family:var(--f-m);font-size:.75rem;color:var(--text-dim)"><strong>Where to get lube in India:</strong> <a href="vendors.html" style="color:var(--text)">Meckeys, CtrlShiftStore, KeebsMod</a> all stock Krytox 205g0 and dielectric grease.</div>
       </div>
     </div>
 
@@ -389,14 +429,14 @@
           <span class="pt-icon">💡</span>
           <div class="pt-text"><strong>Use 205g0 for linears, 3203 for tactiles.</strong> Krytox 205g0 is too thick for tactiles and will kill the bump. Use a lighter lube like Tribosys 3203 on tactile switches.</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// TOOLS NEEDED</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// TOOLS NEEDED</div>
         <div class="tools-row">
           <div class="tool-pill"><span class="t-icon">🪣</span> Krytox 205g0 (linears) or 3203 (tactiles)</div>
           <div class="tool-pill"><span class="t-icon">🖌</span> Switch-lubing brush (size 0 or 00)</div>
           <div class="tool-pill"><span class="t-icon">🛠</span> Switch opener</div>
           <div class="tool-pill"><span class="t-icon">📦</span> Switch stem holder (optional)</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// STEPS</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// STEPS</div>
         <ol class="steps">
           <li class="step"><span class="step-n">1</span><span class="step-text">Open the switch housing using a switch opener (or carefully with a flathead). Separate top, stem, bottom, and spring.</span></li>
           <li class="step"><span class="step-n">2</span><span class="step-text">Lube the <strong>inside rails</strong> of the bottom housing — the two channels the stem slides through.</span></li>
@@ -430,13 +470,13 @@
           <span class="pt-icon">💡</span>
           <div class="pt-text"><strong>Best mod-to-effort ratio.</strong> Costs nothing, takes 5 minutes, and genuinely changes the sound signature of your board. Try it before anything else.</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// TOOLS NEEDED</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// TOOLS NEEDED</div>
         <div class="tools-row">
           <div class="tool-pill"><span class="t-icon">📼</span> Masking tape (painter's tape)</div>
           <div class="tool-pill"><span class="t-icon">✂</span> Scissors</div>
           <div class="tool-pill"><span class="t-icon">🔩</span> Screwdriver (to open case)</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// STEPS</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// STEPS</div>
         <ol class="steps">
           <li class="step"><span class="step-n">1</span><span class="step-text">Open your keyboard case and remove the PCB assembly.</span></li>
           <li class="step"><span class="step-n">2</span><span class="step-text">Cut strips of masking tape and apply them to the <strong>back of the PCB</strong>, covering as much surface area as possible.</span></li>
@@ -465,14 +505,14 @@
         <div class="gs-desc">
           Adding foam inside your case dramatically reduces hollow, echoey sounds and brings out a deeper, more satisfying "thock". You can add foam between the PCB and the case bottom, or between the PCB and the plate. <strong>Case foam</strong> is easiest; <strong>PCB foam</strong> (with switch holes cut out) has the most impact.
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// TOOLS NEEDED</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// TOOLS NEEDED</div>
         <div class="tools-row">
           <div class="tool-pill"><span class="t-icon">🧽</span> PE foam or IXPE foam sheet (1–3mm thick)</div>
           <div class="tool-pill"><span class="t-icon">✂</span> Scissors or craft knife</div>
           <div class="tool-pill"><span class="t-icon">📏</span> Ruler</div>
           <div class="tool-pill"><span class="t-icon">🔩</span> Screwdriver</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// STEPS</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// STEPS</div>
         <ol class="steps">
           <li class="step"><span class="step-n">1</span><span class="step-text">Open your keyboard and remove the PCB + plate assembly from the case.</span></li>
           <li class="step"><span class="step-n">2</span><span class="step-text">Trace the case bottom onto your foam sheet and cut it to shape.</span></li>
@@ -502,13 +542,13 @@
         <div class="gs-desc">
           Switch films are thin plastic or POM sheets placed between the top and bottom halves of a switch housing. They tighten the housing tolerance — eliminating the <strong>"wobble"</strong> between the two halves — which reduces noise and makes the switch feel more solid. Especially effective on switches with loose housing tolerances.
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// TOOLS NEEDED</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// TOOLS NEEDED</div>
         <div class="tools-row">
           <div class="tool-pill"><span class="t-icon">🎞</span> Switch films (0.125mm–0.3mm)</div>
           <div class="tool-pill"><span class="t-icon">🛠</span> Switch opener</div>
           <div class="tool-pill"><span class="t-icon">🧤</span> Tweezers</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// STEPS</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// STEPS</div>
         <ol class="steps">
           <li class="step"><span class="step-n">1</span><span class="step-text">Open the switch housing. Remove the stem and set aside.</span></li>
           <li class="step"><span class="step-n">2</span><span class="step-text">Place a switch film flat on the bottom housing, aligning it with the four pins/clips.</span></li>
@@ -541,7 +581,7 @@
           <span style="font-size:1rem;flex-shrink:0">⚠</span>
           <div class="wt-text"><strong>Beginner caution:</strong> Improper desoldering can lift PCB pads and permanently damage the board. Practice on a spare PCB before working on your main board. Take your time.</div>
         </div>
-        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:8px">// TOOLS NEEDED</div>
+        <div style="font-family:var(--f-m);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">// TOOLS NEEDED</div>
         <div class="tools-row">
           <div class="tool-pill"><span class="t-icon">🔥</span> Soldering iron (350–380°C)</div>
           <div class="tool-pill"><span class="t-icon">💨</span> Desoldering pump (solder sucker)</div>
@@ -578,13 +618,13 @@
           Gasket mounting is a <strong>keyboard construction style</strong> rather than a mod — it refers to how the plate is attached to the case. In a gasket-mounted board, the plate "floats" on silicone or rubber gaskets instead of screwing directly to the case. This gives the keyboard a <strong>softer, bouncier typing feel</strong> and a more cushioned sound profile. It's why most enthusiast-tier keyboards cost more.
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem">
-          <div style="background:var(--cream);border:2px solid var(--black);box-shadow:3px 3px 0 #111;padding:16px">
-            <div style="font-family:var(--f-d);font-size:.9rem;font-weight:800;text-transform:uppercase;margin-bottom:8px">Tray / Top Mount<br/><span style="color:#aaa;font-size:.7rem">Budget boards</span></div>
-            <div style="font-family:var(--f-m);font-size:.78rem;color:#555;line-height:1.7">Plate screws directly to case. Stiffer, louder, less flex. Common in budget keyboards. Still moddable with tape + foam.</div>
+          <div style="background:var(--surface);border:2px solid var(--black);box-shadow:3px 3px 0 var(--shadow);padding:16px">
+            <div style="font-family:var(--f-d);font-size:.9rem;font-weight:800;text-transform:uppercase;margin-bottom:8px">Tray / Top Mount<br/><span style="color:var(--text-dim);font-size:.7rem">Budget boards</span></div>
+            <div style="font-family:var(--f-m);font-size:.78rem;color:var(--text-muted);line-height:1.7">Plate screws directly to case. Stiffer, louder, less flex. Common in budget keyboards. Still moddable with tape + foam.</div>
           </div>
-          <div style="background:var(--black);border:2px solid var(--black);box-shadow:3px 3px 0 #111;padding:16px;color:var(--cream)">
-            <div style="font-family:var(--f-d);font-size:.9rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--green)">Gasket Mount<br/><span style="color:#444;font-size:.7rem">Enthusiast tier</span></div>
-            <div style="font-family:var(--f-m);font-size:.78rem;color:#666;line-height:1.7">Plate floats on gaskets. Softer, more flex, warmer sound. Usually found in keyboards ₹8,000+.</div>
+          <div style="background:var(--dark-card-bg);border:2px solid var(--black);box-shadow:3px 3px 0 var(--shadow);padding:16px;color:var(--dark-card-text)">
+            <div style="font-family:var(--f-d);font-size:.9rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--green)">Gasket Mount<br/><span style="color:var(--text-muted);font-size:.7rem">Enthusiast tier</span></div>
+            <div style="font-family:var(--f-m);font-size:.78rem;color:var(--text-muted);line-height:1.7">Plate floats on gaskets. Softer, more flex, warmer sound. Usually found in keyboards ₹8,000+.</div>
           </div>
         </div>
         <div class="pro-tip">
@@ -600,12 +640,12 @@
     <!-- 08 Glossary -->
     <div class="guide-section reveal" id="mod-glossary">
       <div class="gs-header" onclick="toggleSection(this)">
-        <div class="gs-icon" style="background:var(--black)">📖</div>
+        <div class="gs-icon" style="background:var(--dark-card-bg)">📖</div>
         <div>
           <div class="gs-num">MOD_008</div>
           <div class="gs-title">Glossary of Terms</div>
         </div>
-        <div class="gs-tag" style="background:var(--black);color:var(--cream)">Reference</div>
+        <div class="gs-tag" style="background:var(--text);color:var(--bg)">Reference</div>
         <div class="gs-chevron">▾</div>
       </div>
       <div class="gs-body">
@@ -637,7 +677,7 @@
       <h2>TYPING <em style="color:var(--cyan)">PRACTICE</em></h2>
       <div class="sec-tag" style="color:var(--cyan)">TEST YOUR SPEED</div>
     </div>
-    <p class="reveal" style="font-family:var(--f-m);font-size:.85rem;color:#555;line-height:1.8;margin-bottom:1.5rem;transition-delay:.04s">Once your board is modded to perfection, put it to work. These are the community's favourite typing test and practice sites.</p>
+    <p class="reveal" style="font-family:var(--f-m);font-size:.85rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;transition-delay:.04s">Once your board is modded to perfection, put it to work. These are the community's favourite typing test and practice sites.</p>
     <div class="practice-grid reveal" id="typingPracticeGrid" style="transition-delay:.08s"></div>
   </section>
 
@@ -656,7 +696,7 @@
       <div style="font-size:2rem;flex-shrink:0">🚀</div>
       <div style="flex:1;min-width:200px">
         <div style="font-family:var(--f-d);font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:8px">Ready to build?</div>
-        <div style="font-family:var(--f-m);font-size:.85rem;line-height:1.8;color:#333;margin-bottom:18px">Find the parts you need from verified Indian vendors, or get a builder to do the hard work for you.</div>
+        <div style="font-family:var(--f-m);font-size:.85rem;line-height:1.8;color:var(--text-muted);margin-bottom:18px">Find the parts you need from verified Indian vendors, or get a builder to do the hard work for you.</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a href="vendors.html" class="btn-primary">Browse Vendors →</a>
           <a href="builders.html" class="btn-secondary">Find a Builder</a>
@@ -693,7 +733,13 @@
       <li><a href="about.html">_About</a></li>
     </ul></div>
   </div>
-  <div class="f-copy">© 2025 KEYDIR // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END</div>
+  <div class="f-bottom">
+    <div class="f-copy">© 2026 KEYDIR // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END</div>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <span class="tt-icon">◑</span>
+      <span class="tt-label">DARK MODE</span>
+    </button>
+  </div>
   <div class="f-watermark">GUIDE</div>
 </footer>
 

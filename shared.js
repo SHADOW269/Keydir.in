@@ -208,6 +208,7 @@ const BRANDS = [
   {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",      col:"var(--red)",    risk:false, warning_message:""},
   {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",      col:"var(--red)",    risk:false, warning_message:""},
   {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",     col:"var(--yellow)", risk:false, warning_message:""},
+  {name:"UnCtrl",          url:"https://www.gameunctrl.com/",           spec:"Gaming Accessories",      col:"var(--red)",    risk:false, warning_message:""},
   {name:"Xtro",            url:"https://xtro.gg/",                      spec:"Indian Brand That Cares", col:"var(--purple)", risk:false, warning_message:""},
   {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",           col:"var(--red)",    risk:false, warning_message:""},
 ];
