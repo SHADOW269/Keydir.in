@@ -172,9 +172,11 @@ const VENDORS = [
    All non-empty contact fields render as buttons automatically.
    ══════════════════════════════════════════════════════════════ */
 const DIY_BUILDERS = [
-  { name:"LVL3",     url:"https://lvl3.diy/",     icon:"⚗",  col:"var(--blue)",   desc:"Custom parts and artisan focus. Unique builds for enthusiasts who demand the extraordinary.", tag:"CUSTOM_PARTS",  warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
-  { name:"Hawtkeys", url:"https://hawtkeys.com/", icon:"🔧",  col:"var(--orange)", desc:"Specialized keyboard components for the discerning builder. Quality over quantity, always.", tag:"SPECIALIST",    warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
-  { name:"Parix",    url:"https://parix.in/",      icon:"🛠",  col:"var(--purple)", desc:"Custom keyboard services tailored to your exact specifications. From concept to clack.",    tag:"BUILD_SERVICE", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"LVL3",     url:"https://lvl3.diy/",     icon:"⚗",   col:"var(--blue)",    desc:"split|58-columnar-key|wireless|made-to-order|preassembled keyboard kit.", tag:"SPLIT-BOARD",  warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"Hawtkeys", url:"https://hawtkeys.com/", icon:"🔧",  col:"var(--orange)",  desc:"Specialized Macropads components for your workspace with QMK/VIA compatibility.", tag:"Macropads",    warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"Parix",    url:"https://parix.in/",     icon:"🛠",   col:"var(--purple)", desc:"Hand-assembled split keyboards for developers. Built to order with open source firmware. ",    tag:"Split-Keybs", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"MrSnek",   url:"https://mrsnek.com/",   icon:"🌀",  col:"var(--green)",   desc:"Design, prototype, and craft our products in-house, with full creative control and attention to detail. From bold spacebars to expressive keycap sets.", tag:"KEYCAPS", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"defaultwiring", url:"https://www.instagram.com/defaultwiring", icon:"🔌", col:"var(--black)", desc:"Handcrafted cables with you having complete creative freedom.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
   // No-website example:
   // { name:"CablesByRaj", url:"", icon:"🌀", col:"var(--green)", desc:"Handcrafted coiled cables.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"919876543210", discord:"" },
 ];
