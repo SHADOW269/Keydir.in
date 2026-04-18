@@ -273,7 +273,10 @@ function initCursor() {
   document.addEventListener("mousemove", e => {
     cur.style.left = e.clientX + "px";
     cur.style.top  = e.clientY + "px";
+    cur.classList.remove("off");
   });
+  document.addEventListener("mouseleave", () => cur.classList.add("off"));
+  document.addEventListener("mouseenter", () => cur.classList.remove("off"));
   document.querySelectorAll("a,button,input,textarea,.cat-btn").forEach(el => {
     el.addEventListener("mouseenter", () => cur.classList.add("big"));
     el.addEventListener("mouseleave", () => cur.classList.remove("big"));
