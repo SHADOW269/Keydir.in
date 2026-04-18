@@ -120,13 +120,20 @@ body{
   overflow-x:hidden;
   transition:background-color .25s,color .25s;
 }
-@media(pointer:fine){body{cursor:none}}
+@media(pointer:fine){
+  *, *::before, *::after { cursor: none !important; }
+}
+
 
 /* ── Custom cursor ── */
 #cursor{
   pointer-events:none;position:fixed;z-index:9999;
   width:18px;height:18px;background:var(--text);border-radius:50%;
-  transition:width .15s,height .15s,border-radius .15s,background .15s;
+  opacity:1;
+  transition:width .15s,height .15s,border-radius .15s,background .15s,opacity .25s ease;
+}
+#cursor.off{
+  opacity:0;
 }
 #cursor.big{
   width:54px;height:54px;background:var(--yellow);
