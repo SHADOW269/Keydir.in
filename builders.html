@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>DIY Builders — KEYDIR.exe India</title>
+<title>DIY Builders — KEYDIR.in India</title>
 <meta name="description" content="Custom keyboard builders and DIY specialists in India — LVL3, Hawtkeys, Parix."/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="shortcut icon" href="IMAGES/mkd-logo.png" type="image/x-icon">
 <style>
-.b-hero{padding:calc(var(--nav-h)+60px) 24px 60px;max-width:1380px;margin:0 auto}
+.b-hero{padding:calc(var(--nav-h) + 100px) 24px 80px;max-width:1380px;margin:0 auto}
 .b-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .b-title{font-family:var(--f-d);font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
 .b-title .outline{-webkit-text-stroke:3px var(--black);color:transparent}
@@ -29,6 +30,20 @@
 .builder-warning{display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px 12px;background:#fff0f0;border:2px solid var(--red);font-family:var(--f-m);font-size:.75rem;color:var(--red);line-height:1.5}
 .builder-card-bot{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:2px solid var(--black);background:rgba(0,0,0,.025)}
 .builder-stat{font-family:var(--f-m);font-size:.7rem;color:#777;text-transform:uppercase;letter-spacing:.06em}
+/* Contact icons for builders without websites */
+.contact-icons{display:flex;gap:8px;align-items:center}
+.contact-icon{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:7px 14px;border:2px solid var(--black);
+  font-family:var(--f-m);font-size:.72rem;font-weight:700;
+  text-decoration:none;color:var(--black);background:var(--cream);
+  box-shadow:3px 3px 0 #111;transition:all .12s;text-transform:uppercase;
+}
+.contact-icon:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 #111}
+.contact-icon.ci-phone{background:var(--green);color:#111;border-color:var(--black)}
+.contact-icon.ci-whatsapp{background:#25D366;color:#fff;border-color:var(--black)}
+.contact-icon.ci-discord{background:#5865F2;color:#fff;border-color:var(--black)}
+.builder-page-wrap{padding-bottom:80px}
 /* Info box */
 .info-box{background:var(--black);border:2px solid var(--black);box-shadow:var(--sh-lg);padding:28px;color:var(--cream)}
 .info-box-title{font-family:var(--f-m);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #222}
@@ -49,13 +64,13 @@
 <body>
 <div id="cursor"></div><div id="prog"></div>
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">⌨ KEYDIR.exe</a>
+  <a href="index.html" class="nav-logo">⌨ KEYDIR.in</a>
   <div class="nav-links">
     <a href="index.html">_Home</a>
     <a href="vendors.html">_Vendors</a>
     <a href="builders.html">_Builders</a>
     <a href="brands.html">_Brands</a>
-    <a href="marketplace.html">_Market</a>
+    <a href="guide.html">_Guide</a>
     <a href="about.html">_About</a>
     <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--black);color:var(--cream)">_GitHub</a>
   </div>
@@ -67,7 +82,6 @@
   <a href="vendors.html">_Vendors</a>
   <a href="builders.html">_Builders</a>
   <a href="brands.html">_Brands</a>
-  <a href="marketplace.html">_Market</a>
   <a href="about.html">_About</a>
 </div>
 
@@ -109,7 +123,7 @@
 </div>
 
 <!-- Builder cards -->
-<div class="page-body">
+<div class="page-body builder-page-wrap" style="padding-bottom:100px">
   <section style="padding:60px 0 48px">
     <div class="sec-head reveal">
       <h2>THE <em style="color:var(--blue)">BUILDERS</em></h2>
@@ -157,13 +171,14 @@
 
 <footer>
   <div class="footer-inner">
-    <div><div class="f-logo">⌨ KEYDIR.exe</div><div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads.</div></div>
+    <div><div class="f-logo">⌨ KEYDIR.in</div><div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads.</div></div>
     <div class="f-col"><h4>Navigate</h4><ul>
       <li><a href="index.html">_Home</a></li>
       <li><a href="vendors.html">_Vendors</a></li>
       <li><a href="builders.html">_Builders</a></li>
       <li><a href="brands.html">_Brands</a></li>
       <li><a href="marketplace.html">_Market</a></li>
+      <li><a href="guide.html">_Guide</a></li>
       <li><a href="about.html">_About</a></li>
     </ul></div>
     <div class="f-col"><h4>Links</h4><ul>
@@ -216,7 +231,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="builder-card-bot">
         <div class="builder-stat">Specialist Builder</div>
-        <a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT STORE<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
+        <div class="contact-icons">
+          ${b.url ? `<a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT STORE<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>` : ""}
+          ${b.phone ? `<a href="tel:${b.phone}" class="contact-icon ci-phone">📱 Call</a>` : ""}
+          ${b.whatsapp ? `<a href="https://wa.me/${b.whatsapp.replace(/\D/g,'')}" target="_blank" rel="noopener" class="contact-icon ci-whatsapp">💬 WhatsApp</a>` : ""}
+          ${b.discord ? `<a href="${b.discord}" target="_blank" rel="noopener" class="contact-icon ci-discord">🎧 Discord</a>` : ""}
+        </div>
       </div>
     `;
     g.appendChild(card);

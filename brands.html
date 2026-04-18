@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Brand Stores — KEYDIR.exe India</title>
+<title>Brand Stores — KEYDIR.in India</title>
 <meta name="description" content="Official brand stores in India — Keychron, Redragon, Cosmic Byte, TVS Electronics and more."/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="shortcut icon" href="IMAGES/mkd-logo.png" type="image/x-icon">
 <style>
-.br-hero{padding:calc(var(--nav-h)+60px) 24px 60px;max-width:1380px;margin:0 auto}
+.br-hero{padding:calc(var(--nav-h) + 100px) 24px 80px;max-width:1380px;margin:0 auto}
 .br-title{font-family:var(--f-d);font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;margin-bottom:1.25rem}
 .br-title .outline{-webkit-text-stroke:3px var(--black);color:transparent}
 .br-sub{font-family:var(--f-m);font-size:.9rem;line-height:1.8;background:var(--yellow);border:2px solid var(--black);padding:14px 18px;box-shadow:var(--sh);transform:rotate(-.3deg);display:inline-block;margin-bottom:2rem;max-width:520px}
@@ -52,13 +53,13 @@
 <body>
 <div id="cursor"></div><div id="prog"></div>
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">⌨ KEYDIR.exe</a>
+  <a href="index.html" class="nav-logo">⌨ KEYDIR.in</a>
   <div class="nav-links">
     <a href="index.html">_Home</a>
     <a href="vendors.html">_Vendors</a>
     <a href="builders.html">_Builders</a>
     <a href="brands.html">_Brands</a>
-    <a href="marketplace.html">_Market</a>
+    <a href="guide.html">_Guide</a>
     <a href="about.html">_About</a>
     <a href="https://github.com/SHADOW269/Keyboard-Lab" target="_blank" style="background:var(--black);color:var(--cream)">_GitHub</a>
   </div>
@@ -70,7 +71,6 @@
   <a href="vendors.html">_Vendors</a>
   <a href="builders.html">_Builders</a>
   <a href="brands.html">_Brands</a>
-  <a href="marketplace.html">_Market</a>
   <a href="about.html">_About</a>
 </div>
 
@@ -97,7 +97,7 @@
   </div>
 </div>
 
-<div class="page-body">
+<div class="page-body" style="padding-bottom:100px">
   <!-- Stats -->
   <div class="stat-strip reveal" style="margin:3rem 0 3rem">
     <div class="ss-item"><span class="ss-num" id="totalBrands">0</span><span class="ss-lbl">Brand Stores</span></div>
@@ -111,7 +111,31 @@
     <h2>ALL <em style="color:var(--pink)">BRANDS</em></h2>
     <div class="sec-tag" style="color:var(--pink)"><span data-stat="brands">9</span> OFFICIAL STORES</div>
   </div>
-  <div class="brand-grid reveal" style="transition-delay:.08s" id="brandGrid"></div>
+  <div class="brand-grid reveal" style="transition-delay:.08s;margin-bottom:3rem" id="brandGrid"></div>
+
+  <!-- 3rd-Party Sellers -->
+  <section style="padding:0 0 3rem">
+    <div class="sec-head reveal">
+      <h2>3RD-PARTY <em style="color:var(--orange)">SELLERS</em></h2>
+      <div class="sec-tag" style="color:var(--orange)" id="tpSellerTag">0 SELLERS</div>
+    </div>
+    <p class="reveal" style="font-family:var(--f-m);font-size:.85rem;color:#555;line-height:1.8;margin-bottom:1.5rem;transition-delay:.04s">Third-party resellers who stock multiple brands — not the manufacturer directly. May offer competitive pricing or bundles.</p>
+    <div id="thirdPartyGrid" class="brand-grid reveal" style="transition-delay:.08s"></div>
+    <div id="thirdPartyEmpty" style="display:none;font-family:var(--f-m);font-size:.85rem;color:#888;border:2px dashed #ccc;padding:2rem;text-align:center">No 3rd-party sellers listed yet. <a href="https://github.com/SHADOW269/Keyboard-Lab/issues/new" target="_blank" style="color:#111">Suggest one →</a></div>
+  </section>
+
+  <!-- Marketplace -->
+  <section style="padding:0 0 3rem">
+    <div class="sec-head reveal">
+      <h2>ALSO ON <em style="color:var(--cyan)">MARKETPLACES</em></h2>
+      <div class="sec-tag" id="marketplaceTag" style="color:var(--cyan)">2 PLATFORMS</div>
+    </div>
+    <p class="reveal" style="font-family:var(--f-m);font-size:.85rem;color:#555;line-height:1.8;margin-bottom:1.5rem;transition-delay:.04s">Can't find what you need from official stores? Browse keyboards, accessories, and peripherals on India's biggest platforms — wide selection, buyer protection, and easy returns.</p>
+    <div id="marketplaceGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px" class="reveal" style="transition-delay:.08s"></div>
+    <div style="margin-top:12px;text-align:right">
+      <a href="marketplace.html" style="font-family:var(--f-m);font-size:.75rem;color:#777;text-decoration:none">Full marketplace page →</a>
+    </div>
+  </section>
 
   <!-- Disclaimer -->
   <section style="padding:3rem 0 80px">
@@ -130,13 +154,14 @@
 
 <footer>
   <div class="footer-inner">
-    <div><div class="f-logo">⌨ KEYDIR.exe</div><div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads.</div></div>
+    <div><div class="f-logo">⌨ KEYDIR.in</div><div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads.</div></div>
     <div class="f-col"><h4>Navigate</h4><ul>
       <li><a href="index.html">_Home</a></li>
       <li><a href="vendors.html">_Vendors</a></li>
       <li><a href="builders.html">_Builders</a></li>
       <li><a href="brands.html">_Brands</a></li>
       <li><a href="marketplace.html">_Market</a></li>
+      <li><a href="guide.html">_Guide</a></li>
       <li><a href="about.html">_About</a></li>
     </ul></div>
     <div class="f-col"><h4>Links</h4><ul>
@@ -161,49 +186,99 @@ const BRAND_ACCENT_COLS = [
   "var(--red)","var(--green)","var(--yellow)","var(--purple)"
 ];
 
+function buildBrandCard(b, i, accentCols) {
+  const accentCol = accentCols[i % accentCols.length];
+  const card = document.createElement("div");
+  card.className = "brand-card reveal";
+  card.style.transitionDelay = `${(i % 3) * 0.08}s`;
+  card.innerHTML = `
+    <div class="brand-card-accent" style="background:${accentCol}"></div>
+    <div class="brand-card-body">
+      <div class="brand-number">BRAND_${String(i + 1).padStart(3, "0")}</div>
+      <div class="brand-name-row">
+        <div class="brand-name">${b.name}</div>
+      </div>
+      <div class="brand-spec">${b.spec}</div>
+      ${b.risk ? `<div class="risk-badge">⚠ Enter at own risk</div>${b.warning_message ? `<div class="risk-message">${b.warning_message}</div>` : ""}` : ""}
+    </div>
+    <div class="brand-card-foot">
+      <div class="brand-foot-label">Official India Store</div>
+      <a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
+    </div>
+  `;
+  return card;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  // All Brands
   const g = document.getElementById("brandGrid");
-  if (!g) return;
+  if (g) {
+    const riskCount = BRANDS.filter(b => b.risk).length;
+    if (document.getElementById("totalBrands")) document.getElementById("totalBrands").textContent = BRANDS.length;
+    if (document.getElementById("riskBrands"))  document.getElementById("riskBrands").textContent  = riskCount;
+    if (document.getElementById("safeBrands"))  document.getElementById("safeBrands").textContent  = BRANDS.length - riskCount;
 
-  const riskCount = BRANDS.filter(b => b.risk).length;
-  const totalEl   = document.getElementById("totalBrands");
-  const riskEl    = document.getElementById("riskBrands");
-  const safeEl    = document.getElementById("safeBrands");
+    BRANDS.forEach((b, i) => {
+      const card = buildBrandCard(b, i, BRAND_ACCENT_COLS);
+      g.appendChild(card);
+      setTimeout(() => {
+        const io = new IntersectionObserver(en => {
+          en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+        }, { threshold: .08 });
+        io.observe(card);
+      }, 0);
+    });
+  }
 
-  if (totalEl) totalEl.textContent = BRANDS.length;
-  if (riskEl)  riskEl.textContent  = riskCount;
-  if (safeEl)  safeEl.textContent  = BRANDS.length - riskCount;
+  // 3rd-Party Sellers
+  const tpGrid = document.getElementById("thirdPartyGrid");
+  const tpEmpty = document.getElementById("thirdPartyEmpty");
+  const tpTag = document.getElementById("tpSellerTag");
+  if (tpGrid && typeof THIRD_PARTY_SELLERS !== "undefined") {
+    if (tpTag) tpTag.textContent = THIRD_PARTY_SELLERS.length + " SELLER" + (THIRD_PARTY_SELLERS.length !== 1 ? "S" : "");
+    if (THIRD_PARTY_SELLERS.length === 0) {
+      tpGrid.style.display = "none";
+      if (tpEmpty) tpEmpty.style.display = "block";
+    } else {
+      THIRD_PARTY_SELLERS.forEach((b, i) => {
+        const card = buildBrandCard(b, i, ["var(--orange)","var(--cyan)","var(--purple)","var(--pink)"]);
+        card.querySelector(".brand-foot-label").textContent = "3rd-Party Seller";
+        tpGrid.appendChild(card);
+        setTimeout(() => {
+          const io = new IntersectionObserver(en => {
+            en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+          }, { threshold: .08 });
+          io.observe(card);
+        }, 0);
+      });
+    }
+  }
 
-  BRANDS.forEach((b, i) => {
-    const accentCol = BRAND_ACCENT_COLS[i % BRAND_ACCENT_COLS.length];
-    const card = document.createElement("div");
-    card.className = "brand-card reveal";
-    card.style.transitionDelay = `${(i % 3) * 0.08}s`;
-
-    card.innerHTML = `
-      <div class="brand-card-accent" style="background:${accentCol}"></div>
-      <div class="brand-card-body">
-        <div class="brand-number">BRAND_${String(i + 1).padStart(3, "0")}</div>
-        <div class="brand-name-row">
-          <div class="brand-name">${b.name}</div>
+  // Marketplace
+  const mGrid = document.getElementById("marketplaceGrid");
+  const mTag  = document.getElementById("marketplaceTag");
+  if (mGrid && typeof MARKETPLACE_LINKS !== "undefined") {
+    if (mTag) mTag.textContent = MARKETPLACE_LINKS.length + " PLATFORM" + (MARKETPLACE_LINKS.length !== 1 ? "S" : "");
+    MARKETPLACE_LINKS.forEach(m => {
+      const textCol = m.textColor || "#111";
+      const a = document.createElement("a");
+      a.href   = m.url;
+      a.target = "_blank";
+      a.rel    = "noopener";
+      a.style.cssText = `display:flex;align-items:center;gap:18px;padding:24px 28px;background:${m.color};border:2px solid var(--black);box-shadow:var(--sh-lg);text-decoration:none;color:${textCol};transition:transform .12s,box-shadow .12s`;
+      a.onmouseenter = () => { a.style.transform="translate(4px,4px)"; a.style.boxShadow="2px 2px 0 #111"; };
+      a.onmouseleave = () => { a.style.transform=""; a.style.boxShadow="var(--sh-lg)"; };
+      a.innerHTML = `
+        <div style="font-size:2rem;width:56px;height:56px;border:2px solid ${textCol === '#fff' ? 'rgba(255,255,255,.3)' : 'var(--black)'};display:flex;align-items:center;justify-content:center;background:var(--black);flex-shrink:0">${m.icon}</div>
+        <div>
+          <div style="font-family:var(--f-d);font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;margin-bottom:5px">${m.label}</div>
+          <div style="font-family:var(--f-m);font-size:.75rem;color:${textCol === '#fff' ? 'rgba(255,255,255,.7)' : '#555'}">${m.desc}</div>
         </div>
-        <div class="brand-spec">${b.spec}</div>
-        ${b.risk ? `<div class="risk-badge">⚠ Enter at own risk</div>${b.warning_message ? `<div class="risk-message">${b.warning_message}</div>` : ""}` : ""}
-      </div>
-      <div class="brand-card-foot">
-        <div class="brand-foot-label">Official India Store</div>
-        <a href="${b.url}" target="_blank" rel="noopener" class="btn-visit">VISIT<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
-      </div>
-    `;
-    g.appendChild(card);
-
-    setTimeout(() => {
-      const io = new IntersectionObserver(en => {
-        en.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-      }, { threshold: .08 });
-      io.observe(card);
-    }, 0);
-  });
+        <div style="margin-left:auto;font-family:var(--f-m);font-weight:800;font-size:1.1rem">↗</div>
+      `;
+      mGrid.appendChild(a);
+    });
+  }
 });
 </script>
 </body>

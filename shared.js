@@ -1,8 +1,120 @@
-/* ════════════════════════════════
-   KEYDIR — Shared JavaScript
-   ════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════════
+   KEYDIR.in — Shared JavaScript
+   ════════════════════════════════════════════════════════════════
+   This file is the SINGLE SOURCE OF TRUTH for all site data.
+   Edit the arrays below to add/update/remove any entry.
+   Changes here automatically reflect across all pages.
+   ════════════════════════════════════════════════════════════════ */
 
-/* ── Vendor Data (source of truth — mirrors vendors.json) ── */
+
+/* ══════════════════════════════════════════════════════════════
+   COMMUNITY_LINKS
+   Shown on: guide.html (Community section)
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     label  {string}  Display name of the community platform
+     url    {string}  Full URL to the community page
+     icon   {string}  Emoji shown on the card
+     desc   {string}  One-line description shown under the label
+   ══════════════════════════════════════════════════════════════ */
+const COMMUNITY_LINKS = [
+  { label: "Discord",           url: "https://discord.com/invite/SgHsHbqqPY",  icon: "🎧", desc: "Indian keeb community Discord server" },
+  { label: "Reddit (MK India)", url: "https://www.reddit.com/r/mkindia/",      icon: "💬", desc: "r/mkindia — India mechanical keyboard subreddit" },
+  // { label: "Telegram",       url: "https://t.me/yourgroup",                 icon: "📢", desc: "Telegram group for India keeb enthusiasts" },
+];
+
+
+/* ══════════════════════════════════════════════════════════════
+   TYPING_PRACTICE_LINKS
+   Shown on: guide.html (Typing Practice section)
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     label  {string}  Display name of the typing site
+     url    {string}  Full URL to the site
+     icon   {string}  Emoji shown on the card
+     desc   {string}  One-line description of what the site offers
+   ══════════════════════════════════════════════════════════════ */
+const TYPING_PRACTICE_LINKS = [
+  { label: "10FastFingers",   url: "https://10fastfingers.com/",       icon: "⚡", desc: "Classic typing speed test with competitions" },
+  { label: "Typings.gg",      url: "https://typings.gg/",              icon: "🎨", desc: "Beautifully designed typing test" },
+  { label: "MonkeyType",      url: "https://monkeytype.com/",          icon: "🐒", desc: "Minimalist, highly customizable typing test" },
+  { label: "TypingClub",      url: "https://www.typingclub.com/",      icon: "🏫", desc: "Structured typing lessons for beginners" },
+  { label: "Typing.works",    url: "https://typing.works/",            icon: "🔤", desc: "Clean and simple typing practice" },
+  { label: "Colemak Academy", url: "https://www.colemak.academy/",     icon: "🗝", desc: "Learn the Colemak keyboard layout" },
+  { label: "TypeLit.io",      url: "https://www.typelit.io/",          icon: "📚", desc: "Practice typing with classic literature" },
+  { label: "Keybr",           url: "https://www.keybr.com/",           icon: "📊", desc: "Adaptive typing practice with statistics" },
+  { label: "Ztype",           url: "https://zty.pe/",                  icon: "🚀", desc: "Space-shooter typing game" },
+  // { label: "Typeracer",    url: "https://play.typeracer.com/",       icon: "🏎", desc: "Race others in real-time typing races" },
+];
+
+
+/* ══════════════════════════════════════════════════════════════
+   MARKETPLACE_LINKS
+   Shown on: brands.html (Marketplace section)
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     label      {string}  Display name of the marketplace
+     url        {string}  Full search URL (can pre-fill a keyboard search)
+     icon       {string}  Emoji shown in the icon box
+     desc       {string}  One-line description of the platform
+     color      {string}  CSS background color of the card.
+                          Use CSS vars: var(--yellow), var(--blue), var(--green),
+                          var(--pink), var(--orange), var(--cyan), var(--red),
+                          var(--purple), var(--teal), or any hex like "#FF6B00"
+     textColor  {string}  Text color — "#111" for dark bg, "#fff" for dark bg
+   ══════════════════════════════════════════════════════════════ */
+const MARKETPLACE_LINKS = [
+  { label: "Amazon India", url: "https://www.amazon.in/s?k=mechanical+keyboard",          icon: "📦", desc: "Fast delivery · Official brand stores · Easy returns",          color: "var(--yellow)", textColor: "#111" },
+  { label: "Flipkart",     url: "https://www.flipkart.com/search?q=mechanical+keyboard",  icon: "🛒", desc: "Big Billion Days deals · Broad selection · Buyer protection",   color: "var(--blue)",   textColor: "#fff" },
+  // { label: "Meesho",    url: "https://meesho.com/...",                                  icon: "🛍", desc: "Budget finds",                                                  color: "var(--pink)",   textColor: "#fff" },
+];
+
+
+/* ══════════════════════════════════════════════════════════════
+   THIRD_PARTY_SELLERS
+   Shown on: brands.html (3rd-Party Sellers section)
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     name            {string}   Store/seller display name
+     url             {string}   Full URL to their storefront
+     spec            {string}   Short one-line description of what they sell
+     risk            {boolean}  true = show "Enter at own risk" warning badge
+     warning_message {string}   Warning text shown under badge (only if risk:true)
+                                Leave "" if risk is false
+
+   Use this for resellers stocking multiple brands (not the manufacturer itself).
+   ══════════════════════════════════════════════════════════════ */
+const THIRD_PARTY_SELLERS = [
+  // { name: "ExampleStore",  url: "https://example.in/",        spec: "Multi-brand reseller",  risk: false, warning_message: "" },
+  // { name: "SketchySeller", url: "https://sketchyseller.in/",  spec: "Budget gear",           risk: true,  warning_message: "Community-reported shipping delays." },
+];
+
+
+/* ══════════════════════════════════════════════════════════════
+   VENDORS
+   Shown on: vendors.html (filterable directory) + index.html (counts)
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     name            {string}    Store display name
+     url             {string}    Full URL to the vendor website
+     cats            {string[]}  Array of category IDs this vendor stocks.
+                                 Must use exact IDs from CAT_META:
+                                   "Pre-built"   – assembled keyboards
+                                   "Barebone"    – kits without switches/keycaps
+                                   "Switches"    – individual switches
+                                   "Keycaps"     – keycap sets
+                                   "Parts/Tools" – stabs, lube, films, openers
+                                   "Accessories" – cables, wrist rests, cases
+                                   "Mouse"       – mice and accessories
+                                   "Deskpad"     – desk mats and pads
+                                   "PC Parts"    – RAM, GPUs, general PC hardware
+                                   "Hall Effect" – Hall Effect switch keyboards
+                                   "Alice"       – Alice/ergonomic angled layouts
+                                   "Split"       – split keyboard kits
+                                   "Low Profile" – low profile switches/keyboards
+     warning         {boolean}   (optional) true = show warning badge
+     warning_message {string}    (optional) Warning text. Only shown if warning:true
+   ══════════════════════════════════════════════════════════════ */
 const VENDORS = [
   {name:"AceKBD",         url:"https://acekbd.com/",          cats:["Barebone","Accessories","Deskpad"]},
   {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Accessories","Mouse"]},
@@ -23,30 +135,93 @@ const VENDORS = [
   {name:"Waimers",        url:"https://waimers.in/",          cats:["Hall Effect","Accessories","Mouse","Deskpad"]},
   {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","Deskpad","PC Parts"]},
   {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Mouse"]},
+  // {name:"NewVendor", url:"https://newvendor.in/", cats:["Pre-built","Switches"], warning:true, warning_message:"Reports of slow shipping."},
 ];
 
-/* ── Builder Data (source of truth — mirrors builders.json) ── */
+
+/* ══════════════════════════════════════════════════════════════
+   DIY_BUILDERS
+   Shown on: builders.html
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     name            {string}   Builder display name
+     url             {string}   Website URL. Leave "" if no website.
+     icon            {string}   Emoji for the icon box (e.g. "🔧", "⚗", "🛠")
+     col             {string}   Accent color — CSS variable:
+                                  var(--blue) | var(--orange) | var(--purple) |
+                                  var(--green) | var(--pink) | var(--cyan) |
+                                  var(--red) | var(--yellow) | var(--teal)
+     desc            {string}   Short description of what this builder offers
+     tag             {string}   Badge label (e.g. "CUSTOM_PARTS", "SPECIALIST",
+                                "BUILD_SERVICE", "CABLES", "ARTISAN", "MODS")
+     warning         {boolean}  true = show a warning box on the card
+     warning_message {string}   Warning text (only shown if warning:true). "" otherwise.
+
+     ── CONTACT FIELDS (alternatives/additions to url) ──
+     phone           {string}   Phone with country code: "+919876543210"
+                                Leave "" to hide the 📱 Call button.
+     whatsapp        {string}   WhatsApp number, digits only, with country code:
+                                "919876543210" (no +, no spaces, no dashes)
+                                Leave "" to hide the 💬 WhatsApp button.
+     discord         {string}   Full Discord invite URL: "https://discord.gg/abc123"
+                                Leave "" to hide the 🎧 Discord button.
+
+   All non-empty contact fields render as buttons automatically.
+   ══════════════════════════════════════════════════════════════ */
 const DIY_BUILDERS = [
-  {name:"LVL3",     url:"https://lvl3.diy/",      icon:"⚗",  col:"var(--blue)",   desc:"Custom parts and artisan focus. Unique builds for enthusiasts who demand the extraordinary.", tag:"CUSTOM_PARTS", warning:false, warning_message:""},
-  {name:"Hawtkeys", url:"https://hawtkeys.com/",  icon:"🔧",  col:"var(--orange)", desc:"Specialized keyboard components for the discerning builder. Quality over quantity, always.", tag:"SPECIALIST", warning:false, warning_message:""},
-  {name:"Parix",    url:"https://parix.in/",       icon:"🛠",  col:"var(--purple)", desc:"Custom keyboard services tailored to your exact specifications. From concept to clack.", tag:"BUILD_SERVICE", warning:false, warning_message:""},
+  { name:"LVL3",     url:"https://lvl3.diy/",     icon:"⚗",  col:"var(--blue)",   desc:"Custom parts and artisan focus. Unique builds for enthusiasts who demand the extraordinary.", tag:"CUSTOM_PARTS",  warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"Hawtkeys", url:"https://hawtkeys.com/", icon:"🔧",  col:"var(--orange)", desc:"Specialized keyboard components for the discerning builder. Quality over quantity, always.", tag:"SPECIALIST",    warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"Parix",    url:"https://parix.in/",      icon:"🛠",  col:"var(--purple)", desc:"Custom keyboard services tailored to your exact specifications. From concept to clack.",    tag:"BUILD_SERVICE", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  // No-website example:
+  // { name:"CablesByRaj", url:"", icon:"🌀", col:"var(--green)", desc:"Handcrafted coiled cables.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"919876543210", discord:"" },
 ];
 
-/* ── Brand Data (source of truth — mirrors brands.json) ── */
+
+/* ══════════════════════════════════════════════════════════════
+   BRANDS
+   Shown on: brands.html (All Brands section)
+   ══════════════════════════════════════════════════════════════
+   Fields:
+     name            {string}   Brand display name
+     url             {string}   Official India storefront URL
+     spec            {string}   Short description of product line
+     col             {string}   Accent color CSS variable (top card stripe):
+                                  var(--blue) | var(--pink) | var(--red) |
+                                  var(--cyan) | var(--orange) | var(--green) |
+                                  var(--yellow) | var(--purple) | var(--teal)
+     risk            {boolean}  true = shows "Enter at own risk" warning badge
+     warning_message {string}   Warning text under badge (only if risk:true). "" otherwise.
+
+   Official manufacturer storefronts only — resellers go in THIRD_PARTY_SELLERS.
+   ══════════════════════════════════════════════════════════════ */
 const BRANDS = [
-  {name:"AULA India",      url:"https://aulaindia.com/",                spec:"Mechanical Boards",      col:"var(--blue)",   risk:false, warning_message:""},
-  {name:"Binepad",         url:"https://www.binepad.in/",               spec:"Macropads & Accessories",col:"var(--pink)",   risk:false, warning_message:""},
-  {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",     col:"var(--red)",    risk:false, warning_message:""},
-  {name:"Cosmic Byte",     url:"https://www.thecosmicbyte.com/",        spec:"Entry-level Gear",       col:"var(--cyan)",   risk:false, warning_message:""},
-  {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",     col:"var(--orange)", risk:false, warning_message:""},
-  {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",     col:"var(--red)",    risk:true,  warning_message:"Community-reported concerns about product quality and after-sales support. Proceed with caution before purchasing."},
-  {name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",     col:"var(--green)",  risk:false, warning_message:""},
-  {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",    col:"var(--yellow)", risk:false, warning_message:""},
-  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",          col:"var(--purple)", risk:false, warning_message:""},
+  {name:"AULA India",      url:"https://aulaindia.com/",                spec:"Mechanical Boards",       col:"var(--blue)",   risk:false, warning_message:""},
+  {name:"Binepad",         url:"https://www.binepad.in/",               spec:"Macropads & Accessories", col:"var(--pink)",   risk:false, warning_message:""},
+  {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",      col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Cosmic Byte",     url:"https://www.thecosmicbyte.com/",        spec:"Entry-level Gear",        col:"var(--cyan)",   risk:false, warning_message:""},
+  {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",      col:"var(--orange)", risk:false, warning_message:""},
+  {name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},
+  {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",     col:"var(--yellow)", risk:false, warning_message:""},
+  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",           col:"var(--purple)", risk:false, warning_message:""},
+  {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",      col:"var(--red)",    risk:true,  warning_message:"Community-reported concerns about product quality and after-sales support. Proceed with caution before purchasing."},
 ];
 
-/* ── Category Metadata ──
-   IDs MUST match the strings used in VENDORS[].cats above */
+
+/* ════════════════════════════════════════════════════════════════
+   CAT_META  ← Only edit to add a brand new filter category
+   ════════════════════════════════════════════════════════════════
+   Fields:
+     id    {string}  Must exactly match strings in VENDORS[].cats
+     label {string}  Display label on the filter button
+     icon  {string}  Emoji icon
+     col   {string}  Color key: yellow|green|blue|pink|orange|cyan|red|purple|black|teal
+     bcls  {string}  Badge CSS class — must exist in style.css as .b-{name}
+
+   To add a new category:
+     1. Add entry here with unique id
+     2. Add .b-{name} class to style.css if it doesn't exist
+     3. Use the exact id in VENDORS[].cats
+   ════════════════════════════════════════════════════════════════ */
 const CAT_META = [
   {id:"Pre-built",   label:"Pre-built",   icon:"⌨",  col:"yellow",  bcls:"b-yellow"},
   {id:"Barebone",    label:"Barebone",    icon:"🗜",  col:"orange",  bcls:"b-orange"},
@@ -58,6 +233,9 @@ const CAT_META = [
   {id:"Deskpad",     label:"Deskpad",     icon:"📋",  col:"teal",    bcls:"b-teal"},
   {id:"PC Parts",    label:"PC Parts",    icon:"💻",  col:"black",   bcls:"b-black"},
   {id:"Hall Effect", label:"Hall Effect", icon:"🧲",  col:"cyan",    bcls:"b-cyan"},
+  {id:"Alice",       label:"Alice",       icon:"🌀",  col:"pink",    bcls:"b-pink"},
+  {id:"Split",       label:"Split",       icon:"✂",  col:"purple",  bcls:"b-purple"},
+  {id:"Low Profile", label:"Low Profile", icon:"📏",  col:"teal",    bcls:"b-teal"},
 ];
 
 const BADGE_CLS = Object.fromEntries(CAT_META.map(c => [c.id, c.bcls]));
@@ -75,7 +253,11 @@ const CAT_ACTIVE_STYLE = {
   teal:   "background:var(--teal);color:#fff;",
 };
 
-/* ── Cursor ── */
+
+/* ════════════════════════════════════════════════════════════════
+   INTERNAL SITE FUNCTIONS — do not edit below this line
+   ════════════════════════════════════════════════════════════════ */
+
 function initCursor() {
   const cur = document.getElementById("cursor");
   if (!cur || !window.matchMedia("(pointer:fine)").matches) return;
@@ -89,7 +271,6 @@ function initCursor() {
   });
 }
 
-/* ── Progress bar ── */
 function initProgress() {
   const bar = document.getElementById("prog");
   if (!bar) return;
@@ -99,7 +280,6 @@ function initProgress() {
   }, { passive: true });
 }
 
-/* ── Nav ── */
 function initNav() {
   const page = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(a => {
@@ -115,7 +295,6 @@ function initNav() {
   }));
 }
 
-/* ── Scroll Reveal ── */
 function initReveal() {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
@@ -123,7 +302,6 @@ function initReveal() {
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 }
 
-/* ── Counter animation ── */
 function animCount(el) {
   const target = parseInt(el.dataset.count);
   const dur = 1100; const start = performance.now();
@@ -141,14 +319,12 @@ function initCounters() {
   document.querySelectorAll("[data-count]").forEach(el => io.observe(el));
 }
 
-/* ── Update footer/hero stat counts from live data ── */
 function updateStatCounts() {
   document.querySelectorAll("[data-stat='vendors']").forEach(el => el.textContent = VENDORS.length);
   document.querySelectorAll("[data-stat='builders']").forEach(el => el.textContent = DIY_BUILDERS.length);
   document.querySelectorAll("[data-stat='brands']").forEach(el => el.textContent = BRANDS.length);
 }
 
-/* ── Shared init ── */
 document.addEventListener("DOMContentLoaded", () => {
   initCursor();
   initProgress();
