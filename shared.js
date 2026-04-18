@@ -85,7 +85,8 @@ const MARKETPLACE_LINKS = [
    Use this for resellers stocking multiple brands (not the manufacturer itself).
    ══════════════════════════════════════════════════════════════ */
 const THIRD_PARTY_SELLERS = [
-  // { name: "ExampleStore",  url: "https://example.in/",        spec: "Multi-brand reseller",  risk: false, warning_message: "" },
+  { name: "Prime abgb",  url: "https://www.primeabgb.com/",        spec: "Multi-brand reseller",  risk: false, warning_message: "" },
+
   // { name: "SketchySeller", url: "https://sketchyseller.in/",  spec: "Budget gear",           risk: true,  warning_message: "Community-reported shipping delays." },
 ];
 
@@ -133,7 +134,7 @@ const VENDORS = [
   {name:"NMPC",           url:"https://nmpc.in/",             cats:["Pre-built","Hall Effect","Mouse","Deskpad"]},
   {name:"StacksKB",       url:"https://stackskb.com/",        cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
   {name:"Waimers",        url:"https://waimers.in/",          cats:["Hall Effect","Accessories","Mouse","Deskpad"]},
-  {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","Deskpad","PC Parts"]},
+  {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","Deskpad","PC Parts","Glass-pad"]},
   {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Mouse"]},
   // {name:"NewVendor", url:"https://newvendor.in/", cats:["Pre-built","Switches"], warning:true, warning_message:"Reports of slow shipping."},
 ];
@@ -195,15 +196,16 @@ const DIY_BUILDERS = [
    Official manufacturer storefronts only — resellers go in THIRD_PARTY_SELLERS.
    ══════════════════════════════════════════════════════════════ */
 const BRANDS = [
+  {name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},
   {name:"AULA India",      url:"https://aulaindia.com/",                spec:"Mechanical Boards",       col:"var(--blue)",   risk:false, warning_message:""},
   {name:"Binepad",         url:"https://www.binepad.in/",               spec:"Macropads & Accessories", col:"var(--pink)",   risk:false, warning_message:""},
-  {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",      col:"var(--red)",    risk:false, warning_message:""},
   {name:"Cosmic Byte",     url:"https://www.thecosmicbyte.com/",        spec:"Entry-level Gear",        col:"var(--cyan)",   risk:false, warning_message:""},
   {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",      col:"var(--orange)", risk:false, warning_message:""},
-  {name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},
+  {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",      col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",      col:"var(--red)",    risk:false, warning_message:""},
   {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",     col:"var(--yellow)", risk:false, warning_message:""},
-  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",           col:"var(--purple)", risk:false, warning_message:""},
-  {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",      col:"var(--red)",    risk:true,  warning_message:"Community-reported concerns about product quality and after-sales support. Proceed with caution before purchasing."},
+  {name:"Xtro",            url:"https://xtro.gg/",                      spec:"Indian Brand That Cares", col:"var(--purple)", risk:false, warning_message:""},
+  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",           col:"var(--red)",    risk:false, warning_message:""},
 ];
 
 
@@ -225,17 +227,19 @@ const BRANDS = [
 const CAT_META = [
   {id:"Pre-built",   label:"Pre-built",   icon:"⌨",  col:"yellow",  bcls:"b-yellow"},
   {id:"Barebone",    label:"Barebone",    icon:"🗜",  col:"orange",  bcls:"b-orange"},
+  {id:"Low Profile", label:"Low Profile", icon:"📏",  col:"teal",    bcls:"b-teal"},
+  {id:"Split",       label:"Split",       icon:"✂",  col:"purple",  bcls:"b-purple"},
+  {id:"Alice",       label:"Alice",       icon:"🌀",  col:"pink",    bcls:"b-pink"},
+  {id:"Hall Effect", label:"Hall Effect", icon:"🧲",  col:"cyan",    bcls:"b-cyan"},
   {id:"Switches",    label:"Switches",    icon:"🔘",  col:"red",     bcls:"b-red"},
   {id:"Keycaps",     label:"Keycaps",     icon:"⬛",  col:"green",   bcls:"b-green"},
   {id:"Parts/Tools", label:"Parts/Tools", icon:"🔧",  col:"purple",  bcls:"b-purple"},
   {id:"Accessories", label:"Accessories", icon:"🎛",  col:"pink",    bcls:"b-pink"},
   {id:"Mouse",       label:"Mouse",       icon:"🖱",  col:"blue",    bcls:"b-blue"},
+  {id:"Mouse-pad",   label:"Mouse-pad",   icon:"🔲",  col:"blue",    bcls:"b-blue"},
   {id:"Deskpad",     label:"Deskpad",     icon:"📋",  col:"teal",    bcls:"b-teal"},
+  {id:"Glass-pad",   label:"Glass-pad",   icon:"◻️",  col:"teal",    bcls:"b-teal"},
   {id:"PC Parts",    label:"PC Parts",    icon:"💻",  col:"black",   bcls:"b-black"},
-  {id:"Hall Effect", label:"Hall Effect", icon:"🧲",  col:"cyan",    bcls:"b-cyan"},
-  {id:"Alice",       label:"Alice",       icon:"🌀",  col:"pink",    bcls:"b-pink"},
-  {id:"Split",       label:"Split",       icon:"✂",  col:"purple",  bcls:"b-purple"},
-  {id:"Low Profile", label:"Low Profile", icon:"📏",  col:"teal",    bcls:"b-teal"},
 ];
 
 const BADGE_CLS = Object.fromEntries(CAT_META.map(c => [c.id, c.bcls]));

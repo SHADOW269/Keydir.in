@@ -47,7 +47,6 @@ body{
 #cursor{
   pointer-events:none;position:fixed;z-index:9999;
   width:18px;height:18px;background:var(--black);border-radius:50%;
-  mix-blend-mode:difference;transform:translate(-50%,-50%);
   transition:width .15s,height .15s,border-radius .15s,background .15s;
 }
 #cursor.big{width:54px;height:54px;background:var(--yellow);mix-blend-mode:normal;border-radius:0;border:2px solid var(--black)}
