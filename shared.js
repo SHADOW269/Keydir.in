@@ -107,33 +107,35 @@ const THIRD_PARTY_SELLERS = [
                                    "Parts/Tools" – stabs, lube, films, openers
                                    "Accessories" – cables, wrist rests, cases
                                    "Mouse"       – mice and accessories
-                                   "Deskpad"     – desk mats and pads
+                                   "Mousepad"	   – A mouse pad is typically 200 mm to 450 mm wide, specifically for the mouse
+                                   "Deskpad"     – desk mats are from 800 mm to 1200 mm in width to accommodate both a keyboard and mouse
+                                   "Glass-pad"	 – specialized glass gaming surfaces
                                    "PC Parts"    – RAM, GPUs, general PC hardware
                                    "Hall Effect" – Hall Effect switch keyboards
                                    "Alice"       – Alice/ergonomic angled layouts
                                    "Split"       – split keyboard kits
-                                   "Low Profile" – low profile switches/keyboards
+                                   "Low-Profile" – low-profile switches/keyboards
      warning         {boolean}   (optional) true = show warning badge
      warning_message {string}    (optional) Warning text. Only shown if warning:true
    ══════════════════════════════════════════════════════════════ */
 const VENDORS = [
-  {name:"AceKBD",         url:"https://acekbd.com/",          cats:["Barebone","Accessories","Deskpad"]},
-  {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Accessories","Mouse"]},
-  {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",  cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Accessories","Mouse","Deskpad"]},
-  {name:"Curiosity Caps", url:"https://curiositycaps.in/",    cats:["Keycaps","Accessories","Deskpad","PC Parts"]},
-  {name:"GenesisPC",      url:"https://www.genesispc.in/",    cats:["Pre-built","Hall Effect","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad"]},
-  {name:"Hardwarecorpus", url:"https://hardwarecorpus.in/",   cats:["Pre-built","Hall Effect","Barebone","Keycaps","Accessories","Mouse"]},
+  {name:"AceKBD",         url:"https://acekbd.com/",          cats:["Accessories","Deskpad"]},
+  {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Mouse"]},
+  {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",  cats:["Pre-built","Low-Profile","Barebone","Alice","Hall Effect", "Keycaps","Switches","Accessories","Mouse","Mousepad","Glass-pad"]},
+  {name:"Curiosity Caps", url:"https://curiositycaps.in/",    cats:["Keycaps","Accessories","Mousepad","Deskpad","Glass-pad","PC Parts"]},
+  {name:"GenesisPC",      url:"https://www.genesispc.in/",    cats:["Pre-built","Hall Effect","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Mousepad","Deskpad","Glass-pad"]},
+  {name:"Hardwarecorpus", url:"https://hardwarecorpus.in/",   cats:["Pre-built","Hall Effect","Barebone","Alice","Keycaps","Accessories","Mouse","Deskpad","PC Parts"]},
   {name:"KeebsMod",       url:"https://www.keebsmod.com/",    cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
   {name:"Keychron India", url:"https://keychron.in/",         cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
   {name:"Keyora",         url:"https://keyora.store/",        cats:["Keycaps","Switches","Parts/Tools","Accessories","Deskpad"]},
-  {name:"Loadout",        url:"https://www.loadout.co.in/",   cats:["Pre-built","Barebone","Keycaps","Switches","Accessories","Mouse","Deskpad"]},
-  {name:"Meckeys",        url:"https://www.meckeys.com/",     cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad"]},
+  {name:"Loadout",        url:"https://www.loadout.co.in/",   cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Accessories","Mouse","Mousepad","Deskpad"]},
+  {name:"Meckeys",        url:"https://www.meckeys.com/",     cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Mousepad","Deskpad"]},
   {name:"Moskeys",        url:"https://moskeys.com/",         cats:["Pre-built","Switches","Mouse"]},
-  {name:"RyuGear",        url:"https://ryugear.in/",          cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Deskpad"]},
-  {name:"NeoMacro",       url:"https://neomacro.in/",         cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad"]},
+  {name:"RyuGear",        url:"https://ryugear.in/",          cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Mousepad"]},
+  {name:"NeoMacro",       url:"https://neomacro.in/",         cats:["Pre-built","Hall Effect","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad","Glass-pad","Mousepad"]},
   {name:"NMPC",           url:"https://nmpc.in/",             cats:["Pre-built","Hall Effect","Mouse","Deskpad"]},
-  {name:"StacksKB",       url:"https://stackskb.com/",        cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
-  {name:"Waimers",        url:"https://waimers.in/",          cats:["Hall Effect","Accessories","Mouse","Deskpad"]},
+  {name:"StacksKB",       url:"https://stackskb.com/",        cats:["Pre-built","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories"]},
+  {name:"Waimers",        url:"https://waimers.in/",          cats:["Hall Effect","Accessories","Switches","Mouse","Glass-pad"]},
   {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","Deskpad","PC Parts","Glass-pad"]},
   {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Mouse"]},
   // {name:"NewVendor", url:"https://newvendor.in/", cats:["Pre-built","Switches"], warning:true, warning_message:"Reports of slow shipping."},
@@ -227,7 +229,7 @@ const BRANDS = [
 const CAT_META = [
   {id:"Pre-built",   label:"Pre-built",   icon:"⌨",  col:"yellow",  bcls:"b-yellow"},
   {id:"Barebone",    label:"Barebone",    icon:"🗜",  col:"orange",  bcls:"b-orange"},
-  {id:"Low Profile", label:"Low Profile", icon:"📏",  col:"teal",    bcls:"b-teal"},
+  {id:"Low-Profile", label:"Low-Profile", icon:"📏",  col:"teal",    bcls:"b-teal"},
   {id:"Split",       label:"Split",       icon:"✂",  col:"purple",  bcls:"b-purple"},
   {id:"Alice",       label:"Alice",       icon:"🌀",  col:"pink",    bcls:"b-pink"},
   {id:"Hall Effect", label:"Hall Effect", icon:"🧲",  col:"cyan",    bcls:"b-cyan"},
@@ -236,7 +238,7 @@ const CAT_META = [
   {id:"Parts/Tools", label:"Parts/Tools", icon:"🔧",  col:"purple",  bcls:"b-purple"},
   {id:"Accessories", label:"Accessories", icon:"🎛",  col:"pink",    bcls:"b-pink"},
   {id:"Mouse",       label:"Mouse",       icon:"🖱",  col:"blue",    bcls:"b-blue"},
-  {id:"Mouse-pad",   label:"Mouse-pad",   icon:"🔲",  col:"blue",    bcls:"b-blue"},
+  {id:"Mousepad",   label:"Mousepad",   icon:"🔲",  col:"blue",    bcls:"b-blue"},
   {id:"Deskpad",     label:"Deskpad",     icon:"📋",  col:"teal",    bcls:"b-teal"},
   {id:"Glass-pad",   label:"Glass-pad",   icon:"◻️",  col:"teal",    bcls:"b-teal"},
   {id:"PC Parts",    label:"PC Parts",    icon:"💻",  col:"black",   bcls:"b-black"},
