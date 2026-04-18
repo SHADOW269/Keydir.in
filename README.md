@@ -1,4 +1,4 @@
-# ⌨ KEYDIR.exe — India Mechanical Keyboard Directory
+# ⌨ KEYDIR.in — India Mechanical Keyboard Directory
 
 > **Community-maintained directory of Indian mechanical keyboard vendors, builders, and brand stores.**
 > No ads. No affiliate links. Just raw data for the keeb community.
