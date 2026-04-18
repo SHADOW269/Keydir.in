@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keydir.in/sitemap.xml
