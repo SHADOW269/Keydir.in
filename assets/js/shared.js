@@ -176,7 +176,7 @@ const DIY_BUILDERS = [
   { name:"Hawtkeys", url:"https://hawtkeys.com/", icon:"🔧",  col:"var(--orange)",  desc:"Specialized Macropads components for your workspace with QMK/VIA compatibility.", tag:"Macropads",    warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
   { name:"Parix",    url:"https://parix.in/",     icon:"🛠",   col:"var(--purple)", desc:"Hand-assembled split keyboards for developers. Built to order with open source firmware. ",    tag:"Split-Keybs", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
   { name:"MrSnek",   url:"https://mrsnek.com/",   icon:"🌀",  col:"var(--green)",   desc:"Design, prototype, and craft our products in-house, with full creative control and attention to detail. From bold spacebars to expressive keycap sets.", tag:"KEYCAPS", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
-  { name:"defaultwiring", url:"https://www.instagram.com/defaultwiring", icon:"🔌", col:"var(--black)", desc:"Handcrafted cables with you having complete creative freedom.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
+  { name:"defaultwiring", url:"https://www.instagram.com/defaultwiring", icon:"🔌", col:"var(--text)", desc:"Handcrafted cables with you having complete creative freedom.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"", discord:"" },
   // No-website example:
   // { name:"CablesByRaj", url:"", icon:"🌀", col:"var(--green)", desc:"Handcrafted coiled cables.", tag:"CABLES", warning:false, warning_message:"", phone:"", whatsapp:"919876543210", discord:"" },
 ];
@@ -270,44 +270,19 @@ const CAT_ACTIVE_STYLE = {
 function initCursor() {
   const cur = document.getElementById("cursor");
   if (!cur || !window.matchMedia("(pointer:fine)").matches) return;
-  let lastX = 0, lastY = 0;
-
-  const updateColorByPosition = (x, y) => {
-    cur.style.visibility = "hidden";
-    const el = document.elementFromPoint(x, y);
-    cur.style.visibility = "visible";
-
-    // Update cursor state
-    if (el && el.closest("a,button,input,textarea,.cat-btn")) {
-      cur.classList.add("big");
-    } else {
-      cur.classList.remove("big");
-    }
-
-    // Update button hover state
-    document.querySelectorAll(".btn-primary,.btn-secondary,.btn-visit,.nav-links a,.nav-logo").forEach(btn => {
-      btn.classList.remove("hov");
-    });
-    if (el) {
-      const hovBtn = el.closest(".btn-primary,.btn-secondary,.btn-visit,.nav-links a,.nav-logo");
-      if (hovBtn) hovBtn.classList.add("hov");
-    }
-  };
-
   document.addEventListener("mousemove", e => {
-    lastX = e.clientX;
-    lastY = e.clientY;
     cur.style.left = e.clientX + "px";
     cur.style.top  = e.clientY + "px";
-    cur.classList.remove("off");
-    updateColorByPosition(lastX, lastY);
   });
+  // Hide cursor when mouse leaves the page
   document.addEventListener("mouseleave", () => cur.classList.add("off"));
   document.addEventListener("mouseenter", () => cur.classList.remove("off"));
-  window.addEventListener("scroll", () => {
-    updateColorByPosition(lastX, lastY);
-  }, { passive: true });
+  document.querySelectorAll("a,button,input,textarea,.cat-btn").forEach(el => {
+    el.addEventListener("mouseenter", () => cur.classList.add("big"));
+    el.addEventListener("mouseleave", () => cur.classList.remove("big"));
+  });
 }
+
 function initProgress() {
   const bar = document.getElementById("prog");
   if (!bar) return;

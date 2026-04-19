@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,29 +9,36 @@
 <title>KEYDIR.in — India Mechanical Keyboard Directory</title>
 
 <!-- Primary SEO -->
-<meta name="description" content="India’s mechanical keyboard directory. Discover vendors, custom builders, switches, keycaps, accessories, and group buys across India — fast, raw, and community-powered.">
+<meta name="description"
+content="India’s mechanical keyboard directory. Discover vendors, custom builders, switches, keycaps, accessories, and group buys across India — fast, raw, and community-powered.">
+
 <link rel="canonical" href="https://keydir.in/">
 
-<!-- Favicon (Google Search logo) -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="icon" type="image/png" href="favicon.png">
+<!-- Favicon (Google Search logo support) -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
 
 <!-- Theme color (mobile browser branding) -->
 <meta name="theme-color" content="#000000">
 
 <!-- Open Graph (Discord / WhatsApp / Twitter preview) -->
 <meta property="og:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
-<meta property="og:description" content="Find keyboard vendors, builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
+<meta property="og:description"
+content="Find keyboard vendors, builders, switches, keycaps, accessories, and group buys across India. Fast. Raw. Community-powered.">
 <meta property="og:url" content="https://keydir.in/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://keydir.in/favicon.png">
+<meta property="og:site_name" content="KEYDIR.in">
+<meta property="og:image" content="https://keydir.in/assets/img/favicon.png">
+<meta property="og:image:alt" content="KEYDIR.in Logo">
 
 <!-- Twitter preview -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="KEYDIR.in — India Mechanical Keyboard Directory">
-<meta name="twitter:description" content="India’s mechanical keyboard directory for vendors, builders, switches, keycaps, and accessories.">
-<meta name="twitter:image" content="https://keydir.in/favicon.png">
+<meta name="twitter:description"
+content="India’s mechanical keyboard directory for vendors, builders, switches, keycaps, and accessories.">
+<meta name="twitter:image" content="https://keydir.in/assets/img/favicon.png">
 
 <!-- Google logo schema (helps search result branding) -->
 <script type="application/ld+json">
@@ -39,12 +47,17 @@
  "@type": "Organization",
  "name": "KEYDIR.in",
  "url": "https://keydir.in",
- "logo": "https://keydir.in/favicon.png"
+ "logo": {
+   "@type": "ImageObject",
+   "url": "https://keydir.in/assets/img/favicon.png",
+   "width": 512,
+   "height": 512
+ }
 }
 </script>
 
-<link rel="stylesheet" href="style.css">
-<script src="theme.js"></script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/theme.js"></script>
 <style>
 /* ── Vendors page ── */
 .v-hero{
@@ -179,25 +192,25 @@
 <div id="cursor"></div><div id="prog"></div>
 
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">⌨ KEYDIR.in</a>
+  <a href="../" class="nav-logo">⌨ KEYDIR.in</a>
   <div class="nav-links">
-    <a href="index.html">_Home</a>
-    <a href="vendors.html">_Vendors</a>
-    <a href="builders.html">_Builders</a>
-    <a href="brands.html">_Brands</a>
-    <a href="guide.html">_Guide</a>
-    <a href="about.html">_About</a>
+    <a href="../">_Home</a>
+    <a href="/vendors/" class="active">_Vendors</a>
+    <a href="/builders/">_Builders</a>
+    <a href="/brands/">_Brands</a>
+    <a href="/guide/">_Guide</a>
+    <a href="/about/">_About</a>
     <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" style="background:var(--text);color:var(--bg)">_GitHub</a>
   </div>
   <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
 <div id="mob-nav">
   <button id="mob-close">[ X ]</button>
-  <a href="index.html">_Home</a>
-  <a href="vendors.html">_Vendors</a>
-  <a href="builders.html">_Builders</a>
-  <a href="brands.html">_Brands</a>
-  <a href="about.html">_About</a>
+  <a href="../">_Home</a>
+  <a href="/vendors/">_Vendors</a>
+  <a href="/builders/">_Builders</a>
+  <a href="/brands/">_Brands</a>
+  <a href="/about/">_About</a>
 </div>
 
 <!-- Hero -->
@@ -224,10 +237,10 @@
     </div>
     <div class="sidebar-card">
       <div class="s-title">// QUICK_LINKS</div>
-      <div class="s-line"><span class="ok">→</span><a href="builders.html" style="color:var(--green);text-decoration:none">DIY Builders</a></div>
-      <div class="s-line"><span class="ok">→</span><a href="brands.html" style="color:var(--green);text-decoration:none">Brand Stores</a></div>
-      <div class="s-line"><span class="ok">→</span><a href="marketplace.html" style="color:var(--green);text-decoration:none">Marketplaces</a></div>
-      <div class="s-line"><span class="ok">→</span><a href="about.html" style="color:var(--green);text-decoration:none">About / Contribute</a></div>
+      <div class="s-line"><span class="ok">→</span><a href="/builders/" style="color:var(--green);text-decoration:none">DIY Builders</a></div>
+      <div class="s-line"><span class="ok">→</span><a href="/brands/" style="color:var(--green);text-decoration:none">Brand Stores</a></div>
+      <div class="s-line"><span class="ok">→</span><a href="/marketplace/" style="color:var(--green);text-decoration:none">Marketplaces</a></div>
+      <div class="s-line"><span class="ok">→</span><a href="/about/" style="color:var(--green);text-decoration:none">About / Contribute</a></div>
     </div>
   </div>
 </div>
@@ -272,42 +285,75 @@
   <div class="vgrid" id="vendorGrid"></div>
 </div>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div><div class="f-logo">⌨ KEYDIR.in</div><div class="f-desc">Community-maintained directory of Indian mechanical keyboard vendors. No affiliate links. No ads.</div></div>
-    <div class="f-col"><h4>Navigate</h4><ul>
-      <li><a href="index.html">_Home</a></li>
-      <li><a href="vendors.html">_Vendors</a></li>
-      <li><a href="builders.html">_Builders</a></li>
-      <li><a href="brands.html">_Brands</a></li>
-      <li><a href="marketplace.html">_Market</a></li>
-      <li><a href="guide.html">_Guide</a></li>
-      <li><a href="about.html">_About</a></li>
-    </ul></div>
-    <div class="f-col"><h4>Categories</h4><ul>
-      <li><a href="vendors.html">Pre-built</a></li>
-      <li><a href="vendors.html">Switches</a></li>
-      <li><a href="vendors.html">Keycaps</a></li>
-      <li><a href="vendors.html">Hall Effect</a></li>
-      <li><a href="vendors.html">Barebone</a></li>
-    </ul></div>
-    <div class="f-col"><h4>Links</h4><ul>
-      <li><a href="https://github.com/SHADOW269/Keydir.in" target="_blank">_GitHub</a></li>
-      <li><a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank">_Report Issue</a></li>
-      <li><a href="https://github.com/SHADOW269/Keydir.in/fork" target="_blank">_Fork</a></li>
-    </ul></div>
+
+    <div>
+      <div class="f-logo">⌨ KEYDIR.exe</div>
+      <div class="f-desc">
+        Community-maintained directory of Indian mechanical keyboard vendors.
+        No affiliate links. No ads. Just raw data for the keeb community.
+      </div>
+    </div>
+
+    <div class="f-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="../">_Home</a></li>
+        <li><a href="/vendors/">_Vendors</a></li>
+        <li><a href="/builders/">_Builders</a></li>
+        <li><a href="/brands/">_Brands</a></li>
+        <li><a href="/guide/">_Guide</a></li>
+        <li><a href="/about/">_About</a></li>
+      </ul>
+    </div>
+
+    <div class="f-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="/vendors/">Pre-built</a></li>
+        <li><a href="/vendors/">Switches</a></li>
+        <li><a href="/vendors/">Keycaps</a></li>
+        <li><a href="/vendors/">Hall Effect</a></li>
+        <li><a href="/vendors/">Barebone</a></li>
+      </ul>
+    </div>
+
+    <div class="f-col">
+      <h4>Project</h4>
+      <ul>
+        <li>
+          <a href="https://github.com/SHADOW269/Keydir.in" target="_blank" rel="noopener">
+            _GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/SHADOW269/Keydir.in/issues" target="_blank" rel="noopener">
+            _Report Issue
+          </a>
+        </li>
+        <li><a href="/Terms-and-Conditions/">_Terms & Conditions</a></li>
+      </ul>
+    </div>
+
   </div>
+
   <div class="f-bottom">
-    <div class="f-copy">© 2026 KEYDIR // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END</div>
+    <div class="f-copy">
+      © 2026 KEYDIR.in // COMMUNITY PROJECT // NOT AFFILIATED WITH ANY VENDOR // SYSTEM_END
+    </div>
+
     <button class="theme-toggle" onclick="toggleTheme()">
       <span class="tt-icon">◑</span>
       <span class="tt-label">DARK MODE</span>
     </button>
   </div>
-  <div class="f-watermark">VENDORS</div>
+
+  <div class="f-watermark">KEYDIR</div>
 </footer>
 
-<script src="shared.js"></script>
+<script src="/assets/js/shared.js"></script>
 <script>
 /* ── Pill styles per category colour ── */
 const PILL_STYLE = {
