@@ -345,3 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCounters();
   updateStatCounts();
 });
+
+
+

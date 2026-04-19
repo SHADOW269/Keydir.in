@@ -125,7 +125,11 @@ body{
 #cursor{
   pointer-events:none;position:fixed;z-index:9999;
   width:18px;height:18px;background:var(--text);border-radius:50%;
-  transition:width .15s,height .15s,border-radius .15s,background .15s;
+  opacity:1;
+  transition:width .15s,height .15s,border-radius .15s,background .15s,opacity .25s ease;
+}
+#cursor.off{
+  opacity:0;
 }
 #cursor.big{
   width:30px;height:30px;background:var(--yellow);
@@ -601,3 +605,5 @@ footer{
   .f-bottom{flex-direction:column;align-items:flex-start;gap:10px}
   .section-tag-label{font-size:.62rem;padding:4px 10px}
 }
+
+
