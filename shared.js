@@ -270,19 +270,44 @@ const CAT_ACTIVE_STYLE = {
 function initCursor() {
   const cur = document.getElementById("cursor");
   if (!cur || !window.matchMedia("(pointer:fine)").matches) return;
+  let lastX = 0, lastY = 0;
+
+  const updateColorByPosition = (x, y) => {
+    cur.style.visibility = "hidden";
+    const el = document.elementFromPoint(x, y);
+    cur.style.visibility = "visible";
+
+    // Update cursor state
+    if (el && el.closest("a,button,input,textarea,.cat-btn")) {
+      cur.classList.add("big");
+    } else {
+      cur.classList.remove("big");
+    }
+
+    // Update button hover state
+    document.querySelectorAll(".btn-primary,.btn-secondary,.btn-visit,.nav-links a,.nav-logo").forEach(btn => {
+      btn.classList.remove("hov");
+    });
+    if (el) {
+      const hovBtn = el.closest(".btn-primary,.btn-secondary,.btn-visit,.nav-links a,.nav-logo");
+      if (hovBtn) hovBtn.classList.add("hov");
+    }
+  };
+
   document.addEventListener("mousemove", e => {
+    lastX = e.clientX;
+    lastY = e.clientY;
     cur.style.left = e.clientX + "px";
     cur.style.top  = e.clientY + "px";
     cur.classList.remove("off");
+    updateColorByPosition(lastX, lastY);
   });
   document.addEventListener("mouseleave", () => cur.classList.add("off"));
   document.addEventListener("mouseenter", () => cur.classList.remove("off"));
-  document.querySelectorAll("a,button,input,textarea,.cat-btn").forEach(el => {
-    el.addEventListener("mouseenter", () => cur.classList.add("big"));
-    el.addEventListener("mouseleave", () => cur.classList.remove("big"));
-  });
+  window.addEventListener("scroll", () => {
+    updateColorByPosition(lastX, lastY);
+  }, { passive: true });
 }
-
 function initProgress() {
   const bar = document.getElementById("prog");
   if (!bar) return;
