@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Prevent indexing of system or duplicate-style paths (if they ever exist)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*?*
+
+# Sitemap location
 Sitemap: https://keydir.in/sitemap.xml
