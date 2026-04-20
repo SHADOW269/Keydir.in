@@ -123,6 +123,7 @@ const VENDORS = [
   {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Mouse"]},
   {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",  cats:["Pre-built","Low-Profile","Barebone","Alice","Hall Effect", "Keycaps","Switches","Accessories","Mouse","Mousepad","Glass-pad"]},
   {name:"Curiosity Caps", url:"https://curiositycaps.in/",    cats:["Keycaps","Accessories","Mousepad","Deskpad","Glass-pad","PC Parts"]},
+  {name:"Cybeart",        url:"https://cybeart.in/",          cats:["Pre-built","Mouse","Mousepad"]},
   {name:"GenesisPC",      url:"https://www.genesispc.in/",    cats:["Pre-built","Hall Effect","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Mousepad","Deskpad","Glass-pad"]},
   {name:"Hardwarecorpus", url:"https://hardwarecorpus.in/",   cats:["Pre-built","Hall Effect","Barebone","Alice","Keycaps","Accessories","Mouse","Deskpad","PC Parts"]},
   {name:"KeebsMod",       url:"https://www.keebsmod.com/",    cats:["Pre-built","Barebone","Keycaps","Switches","Parts/Tools","Accessories"]},
@@ -200,17 +201,19 @@ const DIY_BUILDERS = [
    Official manufacturer storefronts only — resellers go in THIRD_PARTY_SELLERS.
    ══════════════════════════════════════════════════════════════ */
 const BRANDS = [
-  {name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},
-  {name:"AULA India",      url:"https://aulaindia.com/",                spec:"Mechanical Boards",       col:"var(--blue)",   risk:false, warning_message:""},
-  {name:"Binepad",         url:"https://www.binepad.in/",               spec:"Macropads & Accessories", col:"var(--pink)",   risk:false, warning_message:""},
-  {name:"Cosmic Byte",     url:"https://www.thecosmicbyte.com/",        spec:"Entry-level Gear",        col:"var(--cyan)",   risk:false, warning_message:""},
-  {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",      col:"var(--orange)", risk:false, warning_message:""},
-  {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",      col:"var(--red)",    risk:false, warning_message:""},
-  {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",      col:"var(--red)",    risk:false, warning_message:""},
-  {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",     col:"var(--yellow)", risk:false, warning_message:""},
-  {name:"UnCtrl",          url:"https://www.gameunctrl.com/",           spec:"Gaming Accessories",      col:"var(--red)",    risk:false, warning_message:""},
-  {name:"Xtro",            url:"https://xtro.gg/",                      spec:"Indian Brand That Cares", col:"var(--purple)", risk:false, warning_message:""},
-  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",           col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",            col:"var(--green)",  risk:false, warning_message:""},
+  {name:"AULA India",      url:"https://aulaindia.com/",                spec:"Mechanical Boards",             col:"var(--blue)",   risk:false, warning_message:""},
+  {name:"Binepad",         url:"https://www.binepad.in/",               spec:"Macropads & Accessories",       col:"var(--pink)",   risk:false, warning_message:""},
+  {name:"Cosmic Byte",     url:"https://www.thecosmicbyte.com/",        spec:"Entry-level Gear",              col:"var(--cyan)",   risk:false, warning_message:""},
+  {name:"Cybeart",         url:"https://cybeart.in/",                   spec:"Mid-Budget Gaming Merchandise", col:"var(--green)",  risk:false, warning_message:""},
+  {name:"EvoFox",          url:"https://www.amkette.com/pages/evofox",  spec:"Gaming Accessories",            col:"var(--orange)", risk:false, warning_message:""},
+  {name:"Kreo Tech",       url:"https://kreo-tech.com/",                spec:"Budget Peripherals",            col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Redragon",        url:"https://www.redragon.in/",              spec:"Budget Performance",            col:"var(--red)",    risk:false, warning_message:""},
+  {name:"TVS Electronics", url:"https://www.tvselectronics.in/",        spec:"Classic Mechanicals",           col:"var(--yellow)", risk:false, warning_message:""},
+  {name:"UnCtrl",          url:"https://www.gameunctrl.com/",           spec:"Gaming Accessories",            col:"var(--red)",    risk:false, warning_message:""},
+  {name:"Xtro",            url:"https://xtro.gg/",                      spec:"Indian Brand That Cares",       col:"var(--purple)", risk:false, warning_message:""},
+  {name:"Portronics",      url:"https://www.portronics.com/",           spec:"Portable Tech",                 col:"var(--red)",    risk:false, warning_message:""},
+  /*{name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},*/
 ];
 
 
