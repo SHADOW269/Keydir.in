@@ -1,47 +1,90 @@
-# ⌨ KEYDIR.in — India Mechanical Keyboard Directory
-
-> **Community-maintained directory of Indian mechanical keyboard vendors, builders, and brand stores.**
-> No ads. No affiliate links. Just raw data for the keeb community.
-
-[![GitHub Pages](https://img.shields.io/badge/Hosted-GitHub%20Pages-111?style=flat-square&logo=github)](https://shadow269.github.io/keydir.in/)
-[![Vendors](https://img.shields.io/badge/Vendors-19-FAFF00?style=flat-square&labelColor=111)](https://shadow269.github.io/keydir.in/vendors.html)
-[![Categories](https://img.shields.io/badge/Categories-13-00FF6A?style=flat-square&labelColor=111)](https://shadow269.github.io/Keyboard-Lab/vendors.html)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+<table style="border: none; border-collapse: collapse;">
+  <tr>
+    <td width="110" style="border: none; padding: 0;">
+      <img src="assets/img/favicon-512.png" alt="KEYDIR.in Logo" width="100">
+    </td>
+    <td style="border: none; padding: 0 0 0 16px;">
+      <h1>⌨ KEYDIR.in</h1>
+      <b>India's community-maintained mechanical keyboard directory</b><br>
+      Vendors · Builders · Brand Stores · No ads. No affiliates. Just data.<br><br>
+      <a href="https://keydir.in">🌐 keydir.in</a> &nbsp;·&nbsp;
+      <a href="https://github.com/SHADOW269/keydir.in/issues/new">🐛 Report an issue</a> &nbsp;·&nbsp;
+      <a href="https://github.com/SHADOW269/keydir.in/fork">🍴 Fork & contribute</a>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🗺 What's Inside
+## What's inside
 
 | Section | Description |
-|---|---|
-| [**Vendors**](vendors.html) | 19 verified Indian keyboard vendors, filterable by 13 categories |
-| [**DIY Builders**](builders.html) | Custom cable makers, artisan keycap crafters, bespoke build services |
-| [**Brand Stores**](brands.html) | Official India storefronts — Keychron, Redragon, TVS, and more |
-| [**Marketplace**](marketplace.html) | Amazon India & Flipkart keyboard search links |
-| [**Beginner's Guide**](guide.html) | Keyboard modding guide for new enthusiasts |
+| --- | --- |
+| **Vendors** | Verified Indian keyboard vendors, filterable by category |
+| **DIY Builders** | Custom cable makers, artisan keycap crafters, bespoke keyboard services |
+| **Brand Stores** | Official India storefronts — Keychron, Redragon, TVS, and more |
+| **Marketplace** | Amazon India & Flipkart keyboard search links |
+| **Beginner's Guide** | Friendly mechanical keyboard buying & modding guide |
 
 ---
 
-## 📦 Categories
+## Categories
 
-The vendor directory supports filtering across **13 categories**:
+The vendor directory supports filtering across **15 categories**:
 
-`Pre-built` · `Barebone` · `Switches` · `Keycaps` · `Parts/Tools` · `Accessories` · `Mouse` · `Deskpad` · `PC Parts` · `Hall Effect` · `Alice` · `Split` · `Low Profile`
-
----
-
-## 🛠 Tech Stack
-
-- **HTML / CSS / Vanilla JavaScript** — zero frameworks, zero build steps
-- **Data lives in `shared.js`** — edit this file to add/update vendors
-- **Hosted on GitHub Pages** — free, static, fast
-- **NeoBrutalist design system** — custom CSS, `Space Grotesk` + `JetBrains Mono`
+`Pre-built` `Barebone` `Switches` `Keycaps` `Parts / Tools` `Accessories` `Mouse` `Deskpad` `Glasspads` `PC Parts` `Hall Effect` `Alice` `Split` `Low Profile`
 
 ---
 
-## 🤝 How to Contribute
+## Features
 
-All contributions welcome! Here's how to add or update a vendor:
+- 🇮🇳 India-focused vendor discovery
+- ⚡ Fast static site — no frameworks, no bloat
+- 🔍 Category-based filtering
+- 🧩 Builder and brand store listings
+- ⚠️ Community warning flags for vendor concerns
+- 📚 Beginner-friendly guide
+- 🧼 Zero ads, zero tracking, zero affiliate links
+
+---
+
+## Tech stack
+
+Built intentionally simple:
+
+- **HTML + CSS + Vanilla JS** — no build tools, no dependencies
+- **`shared.js`** — single source of truth for all vendor data
+- **GitHub Pages** — static hosting
+- **Fonts:** Space Grotesk, JetBrains Mono
+- **Design:** NeoBrutalist
+
+---
+
+## Project structure
+
+```
+keydir.in/
+├── index.html
+├── vendors/index.html
+├── builders/index.html
+├── brands/index.html
+├── marketplace/index.html
+├── guide/index.html
+├── about/index.html
+├── Terms-and-Conditions/index.html
+├── assets/
+│   ├── img/
+│   ├── css/
+│   └── js/
+│       └── shared.js       ← edit vendor data here
+└── README.md
+```
+
+---
+
+## Contributing
+
+Community contributions keep KEYDIR accurate and useful.
 
 ### 1. Fork the repo
 
@@ -49,93 +92,82 @@ All contributions welcome! Here's how to add or update a vendor:
 https://github.com/SHADOW269/keydir.in/fork
 ```
 
-### 2. Edit `shared.js`
+### 2. Edit vendor data in `/assets/js/shared.js`
 
-Vendor entries live in the `VENDORS` array. Each entry looks like:
-
+**Standard entry:**
 ```js
 {
-  name: "YourVendor",
-  url:  "https://yourvendor.com/",
-  cats: ["Pre-built", "Switches", "Keycaps"]   // use exact category IDs from CAT_META
+  name: "VendorName",
+  url: "https://vendor.in/",
+  cats: ["Switches", "Keycaps"]
 }
 ```
 
-For builders, edit `DIY_BUILDERS`. For brand stores, edit `BRANDS`.
-
-#### Vendor entry with a warning flag:
+**Entry with a community warning flag:**
 ```js
 {
-  name: "SomeVendor",
-  url:  "https://somevendor.in/",
+  name: "VendorName",
+  url: "https://vendor.in/",
   cats: ["Pre-built"],
   warning: true,
   warning_message: "Community-reported concerns about after-sales support."
 }
 ```
 
-### 3. Follow the data guidelines
+### 3. Follow the contribution rules
 
-- ✅ Only list vendors actually operating in India
-- ✅ Use `warning: true` for community-reported issues
-- ✅ Keep descriptions factual and neutral
-- ✅ Verify the URL is live before submitting
-- ❌ No affiliate or paid placements — ever
+✅ Vendor operates in India  
+✅ URL is live and working  
+✅ Categories match `CAT_META`  
+✅ Descriptions are neutral and factual  
+❌ No affiliate links  
+❌ No sponsored placements  
 
-### 4. Submit a Pull Request
+### 4. Open a pull request
 
-Open a PR with a clear title like:
+Use descriptive titles:
+
 ```
 feat: add XYZ vendor (Switches, Keycaps)
 fix: update ABC vendor URL
-warn: flag DEF vendor — community reports of poor support
-```
-
-A maintainer will review and merge.
-
----
-
-## 📁 File Structure
-
-```
-keydir.in/
-├── index.html          # Home page
-├── vendors.html        # Filterable vendor directory
-├── builders.html       # DIY builders listing
-├── brands.html         # Official brand stores
-├── marketplace.html    # Amazon & Flipkart links
-├── guide.html          # Beginner's modding guide
-├── about.html          # Project info & contributors
-├── shared.js           # 🔑 All data lives here — edit this
-├── style.css           # NeoBrutalist design system
-└── README.md           # This file
+warn: flag DEF vendor — community support concerns
 ```
 
 ---
 
-## 🐛 Reporting Issues
+## Reporting issues
 
-Found a dead link? Incorrect info? Know a vendor we're missing?
-
-👉 [Open an issue](https://github.com/SHADOW269/keydir.in/issues/new)
+Found something wrong or outdated? [Open an issue →](https://github.com/SHADOW269/keydir.in/issues/new)
 
 Please include:
 - Vendor name
-- What's wrong / what should change
-- Source or evidence (if flagging a warning)
+- Problem description
+- Suggested fix
+- Evidence (if reporting a warning flag)
 
 ---
 
-## 📄 License
+## Project goals
 
-MIT — free to fork, adapt, and redistribute. Attribution appreciated but not required.
+KEYDIR exists to:
+
+- Help Indian keyboard enthusiasts discover trusted vendors
+- Reduce dependency on scattered Discord links
+- Improve ecosystem transparency
+- Document the India mechanical keyboard scene
 
 ---
 
-<div align="center">
+## License
 
-**Made with ❤ by the India keeb community**
+[MIT](LICENSE) — free to fork, modify, and redistribute. Attribution appreciated but not required.
 
-[Website](https://shadow269.github.io/keydir.in/) · [Issues](https://github.com/SHADOW269/keydir.in/issues) · [Fork](https://github.com/SHADOW269/keydir.in/fork)
+---
 
-</div>
+<p align="center">
+  Built with ❤️ for the 🇮🇳 mechanical keyboard community
+  <br><br>
+  <a href="https://keydir.in">
+    <img src="assets/img/Banner.png" alt="KEYDIR.in Banner" width="100%">
+  </a>
+</p>
