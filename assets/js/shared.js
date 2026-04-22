@@ -119,7 +119,7 @@ const THIRD_PARTY_SELLERS = [
      warning_message {string}    (optional) Warning text. Only shown if warning:true
    ══════════════════════════════════════════════════════════════ */
 const VENDORS = [
-  {name:"AceKBD",         url:"https://acekbd.com/",          cats:["Accessories","Deskpad"]},
+  {name:"AceKBD",         url:"https://acekbd.com/",          cats:["Barebone","Accessories","Deskpad"]},
   {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Mouse"]},
   {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",  cats:["Pre-built","Low-Profile","Barebone","Alice","Hall Effect", "Keycaps","Switches","Accessories","Mouse","Mousepad","Glass-pad"]},
   {name:"Curiosity Caps", url:"https://curiositycaps.in/",    cats:["Keycaps","Accessories","Mousepad","Deskpad","Glass-pad","PC Parts"]},
@@ -132,13 +132,14 @@ const VENDORS = [
   {name:"Loadout",        url:"https://www.loadout.co.in/",   cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Accessories","Mouse","Mousepad","Deskpad"]},
   {name:"Meckeys",        url:"https://www.meckeys.com/",     cats:["Pre-built","Hall Effect","Barebone","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Mousepad","Deskpad"]},
   {name:"Moskeys",        url:"https://moskeys.com/",         cats:["Pre-built","Switches","Mouse"]},
-  {name:"RyuGear",        url:"https://ryugear.in/",          cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Mousepad"]},
   {name:"NeoMacro",       url:"https://neomacro.in/",         cats:["Pre-built","Hall Effect","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad","Glass-pad","Mousepad"]},
   {name:"NMPC",           url:"https://nmpc.in/",             cats:["Pre-built","Hall Effect","Mouse","Deskpad"]},
+  {name:"RyuGear",        url:"https://ryugear.in/",          cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Mousepad"]},
   {name:"StacksKB",       url:"https://stackskb.com/",        cats:["Pre-built","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories"]},
+  {name:"Thock Shop",     url:"https://thethockshop.com/",    cats:["Pre-built","Alice","Switches","Accessories","Mouse"]},
+  {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Low-Profile","Mouse"]},
   {name:"Waimers",        url:"https://waimers.in/",          cats:["Hall Effect","Accessories","Switches","Mouse","Glass-pad"]},
   {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","Deskpad","PC Parts","Glass-pad"]},
-  {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Mouse"]},
   // {name:"NewVendor", url:"https://newvendor.in/", cats:["Pre-built","Switches"], warning:true, warning_message:"Reports of slow shipping."},
 ];
 
