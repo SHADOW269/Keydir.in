@@ -93,7 +93,6 @@ const THIRD_PARTY_SELLERS = [
   { name: "MDComputers", url: "https://mdcomputers.in/", spec: "PC hardware & gaming gear", risk: false, warning_message: "" },
   { name: "PCShop", url: "https://pcshop.in/", spec: "PC hardware & accessories", risk: false, warning_message: "" },
   { name: "PCStudio (Ankit Infotech)", url: "https://pcstudio.in/", spec: "PC components & gaming hardware", risk: false, warning_message: "" },
-  { name: "Prime abgb", url: "https://www.primeabgb.com/", spec: "Multi-brand reseller", risk: false, warning_message: "" },
   { name: "PrimeABGB", url: "https://primeabgb.com/", spec: "High-end PC components & builds", risk: false, warning_message: "" },
   { name: "Quickin Computers", url: "https://quickincomputers.com/", spec: "Cosmic Byte Authorized Sellers", risk: false, warning_message: "" },
   { name: "The ITDepot", url: "https://theitdepot.com/", spec: "PC hardware & networking gear", risk: false, warning_message: "" },
