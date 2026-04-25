@@ -85,8 +85,23 @@ const MARKETPLACE_LINKS = [
    Use this for resellers stocking multiple brands (not the manufacturer itself).
    ══════════════════════════════════════════════════════════════ */
 const THIRD_PARTY_SELLERS = [
-  { name: "Prime abgb",         url: "https://www.primeabgb.com/",        spec: "Multi-brand reseller",            risk: false, warning_message: "" },
-  { name: "Quickin Computers",  url: "https://quickincomputers.com/",     spec: "Cosmic Byte Authorized Sellers",  risk: false, warning_message: "" },
+  { name: "Clarion Computers", url: "https://clarioncomputers.in/", spec: "PC hardware & peripherals", risk: false, warning_message: "" },
+  { name: "Computech Store", url: "https://computechstore.in/", spec: "PC components & electronics", risk: false, warning_message: "" },
+  { name: "EasyShoppi", url: "https://easyshoppi.com/", spec: "PC components & electronics", risk: false, warning_message: "" },
+  { name: "EliteHubs", url: "https://elitehubs.com/", spec: "Gaming peripherals & components", risk: false, warning_message: "" },
+  { name: "GamesnComps", url: "https://gamesncomps.com/", spec: "Gaming PCs & components", risk: false, warning_message: "" },
+  { name: "MDComputers", url: "https://mdcomputers.in/", spec: "PC hardware & gaming gear", risk: false, warning_message: "" },
+  { name: "PCShop", url: "https://pcshop.in/", spec: "PC hardware & accessories", risk: false, warning_message: "" },
+  { name: "PCStudio (Ankit Infotech)", url: "https://pcstudio.in/", spec: "PC components & gaming hardware", risk: false, warning_message: "" },
+  { name: "Prime abgb", url: "https://www.primeabgb.com/", spec: "Multi-brand reseller", risk: false, warning_message: "" },
+  { name: "PrimeABGB", url: "https://primeabgb.com/", spec: "High-end PC components & builds", risk: false, warning_message: "" },
+  { name: "Quickin Computers", url: "https://quickincomputers.com/", spec: "Cosmic Byte Authorized Sellers", risk: false, warning_message: "" },
+  { name: "The ITDepot", url: "https://theitdepot.com/", spec: "PC hardware & networking gear", risk: false, warning_message: "" },
+  { name: "TLG Gaming", url: "https://tlggaming.com/", spec: "Custom PCs & gaming hardware", risk: false, warning_message: "" },
+  { name: "TPS Tech", url: "https://tpstech.in/", spec: "PC hardware & enterprise IT gear", risk: false, warning_message: "" },
+  { name: "Vedant Computers", url: "https://vedantcomputers.com/", spec: "PC components & accessories", risk: false, warning_message: "" },
+  { name: "Vishal Peripherals", url: "https://vishalperipherals.com/", spec: "PC components & peripherals", risk: false, warning_message: "" }
+
   // { name: "SketchySeller", url: "https://sketchyseller.in/",  spec: "Budget gear",           risk: true,  warning_message: "Community-reported shipping delays." },
 ];
 
