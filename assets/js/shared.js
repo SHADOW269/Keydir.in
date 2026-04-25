@@ -85,8 +85,8 @@ const MARKETPLACE_LINKS = [
    Use this for resellers stocking multiple brands (not the manufacturer itself).
    ══════════════════════════════════════════════════════════════ */
 const THIRD_PARTY_SELLERS = [
-  { name: "Prime abgb",  url: "https://www.primeabgb.com/",        spec: "Multi-brand reseller",  risk: false, warning_message: "" },
-
+  { name: "Prime abgb",         url: "https://www.primeabgb.com/",        spec: "Multi-brand reseller",            risk: false, warning_message: "" },
+  { name: "Quickin Computers",  url: "https://quickincomputers.com/",     spec: "Cosmic Byte Authorized Sellers",  risk: false, warning_message: "" },
   // { name: "SketchySeller", url: "https://sketchyseller.in/",  spec: "Budget gear",           risk: true,  warning_message: "Community-reported shipping delays." },
 ];
 
