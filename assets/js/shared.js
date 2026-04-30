@@ -231,6 +231,41 @@ const BRANDS = [
   /*{name:"Ant Esports",     url:"https://antesports.com/",               spec:"Budget PC Hardware",      col:"var(--green)",  risk:false, warning_message:""},*/
 ];
 
+const PAD_ONLY_VENDORS = [
+  {
+    name: "Mopadz",
+    url: "https://mopadz.com/",
+    types: ["Deskpad"],
+    specialty: "",
+    risk: false,
+    warning_message: ""
+  },
+  {
+    name: "Senpaiarts",
+    url: "https://senpaiarts.com/",
+    types: ["Mousepad","Deskpad"],
+    specialty: "",
+    risk: false,
+    warning_message: ""
+  },
+  {
+    name: "Veroforza",
+    url: "https://veroforza.com/",
+    types: ["Mousepad","Deskpad"],
+    specialty: "",
+    risk: false,
+    warning_message: ""
+  },
+  // Add more dedicated pad stores below:
+  // {
+  //   name: "PadStoreName",
+  //   url: "https://example.in/",
+  //   types: ["Mousepad", "Deskpad"],
+  //   specialty: "Description of what makes this store special",
+  //   risk: false,
+  //   warning_message: ""
+  // },
+];
 
 /* ════════════════════════════════════════════════════════════════
    CAT_META  ← Only edit to add a brand new filter category
