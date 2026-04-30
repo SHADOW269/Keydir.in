@@ -153,7 +153,7 @@ const VENDORS = [
   {name:"Thock Shop",     url:"https://thethockshop.com/",    cats:["Pre-built","Alice","Switches","Accessories","Mouse"]},
   {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Low-Profile","Mouse"]},
   {name:"Waimers",        url:"https://waimers.in/",          cats:["Hall Effect","Accessories","Switches","Mouse","Glass-pad"]},
-  {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","Deskpad","PC Parts","Glass-pad"]},
+  {name:"Xtro",           url:"https://xtro.gg/",             cats:["Pre-built","Hall Effect","Accessories","Mouse","PC Parts","Glass-pad"]},
   // {name:"NewVendor", url:"https://newvendor.in/", cats:["Pre-built","Switches"], warning:true, warning_message:"Reports of slow shipping."},
 ];
 
@@ -233,6 +233,14 @@ const BRANDS = [
 
 const PAD_ONLY_VENDORS = [
   {
+    name: "Claw Gears",
+    url: "https://clawgears.in/",
+    types: ["Glass Pad"],
+    specialty: "",
+    risk: false,
+    warning_message: ""
+  },
+  {
     name: "Mopadz",
     url: "https://mopadz.com/",
     types: ["Deskpad"],
@@ -256,6 +264,7 @@ const PAD_ONLY_VENDORS = [
     risk: false,
     warning_message: ""
   },
+  
   // Add more dedicated pad stores below:
   // {
   //   name: "PadStoreName",
