@@ -135,6 +135,7 @@ const THIRD_PARTY_SELLERS = [
 const VENDORS = [
   {name:"AceKBD",         url:"https://acekbd.com/",          cats:["Barebone","Accessories","Deskpad"]},
   {name:"AltF4Gear",      url:"https://altf4gear.com/",       cats:["Pre-built","Hall Effect","Mouse"]},
+  {name:"Credkeys",       url:"https://credkeys.com/",        cats:["Pre-built","Switches","Keycaps","Parts/Tools","Accessories"]},
   {name:"CtrlShiftStore", url:"https://ctrlshiftstore.com/",  cats:["Pre-built","Low-Profile","Barebone","Alice","Hall Effect", "Keycaps","Switches","Accessories","Mouse","Mousepad","Glass-pad"]},
   {name:"Curiosity Caps", url:"https://curiositycaps.in/",    cats:["Keycaps","Accessories","Mousepad","Deskpad","Glass-pad","PC Parts"]},
   {name:"Cybeart",        url:"https://cybeart.in/",          cats:["Pre-built","Mouse","Mousepad"]},
@@ -148,7 +149,7 @@ const VENDORS = [
   {name:"Moskeys",        url:"https://moskeys.com/",         cats:["Pre-built","Switches","Mouse"]},
   {name:"NeoMacro",       url:"https://neomacro.in/",         cats:["Pre-built","Hall Effect","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories","Mouse","Deskpad","Glass-pad","Mousepad"]},
   {name:"NMPC",           url:"https://nmpc.in/",             cats:["Pre-built","Hall Effect","Mouse","Deskpad"]},
-  {name:"RyuGear",        url:"https://ryugear.in/",          cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Mousepad"]},
+  {name:"RyuGear",        url:"https://ryugear.in/",          cats:["Pre-built","Hall Effect","Keycaps","Accessories","Mouse","Mousepad","Glass-pad"]},
   {name:"StacksKB",       url:"https://stackskb.com/",        cats:["Pre-built","Barebone","Split","Keycaps","Switches","Parts/Tools","Accessories"]},
   {name:"Thock Shop",     url:"https://thethockshop.com/",    cats:["Pre-built","Alice","Switches","Accessories","Mouse"]},
   {name:"URX",            url:"https://urx.co.in/",           cats:["Pre-built","Hall Effect","Low-Profile","Mouse"]},
