@@ -18,6 +18,12 @@ const POPUP_DATA = {
   /* ── NEW VENDORS ── */
   new_vendors: [
     {
+      name: "Friction builds",
+      url: "https://docs.google.com/document/d/e/2PACX-1vQlbWhsI1WGu0wSb3qZKR7EIvoXzU4ZlMLlk3Xd4xf6R7GtLIC9vGeFDsoyMzWxa2y7p9L-60B5mtpP/pub",
+      cats: ["Split-keyboards"],
+      added: "May 2026"
+    },
+    {
       name: "Moon's Peripheral Assembly & Repair Hub",
       url: "https://docs.google.com/document/d/e/2PACX-1vTgzL4WWdAgfIhWp30W5CC2cd7HodrE8Pbhl9rsO7SG3YdN6rYHc-2U0nX4amCVsrrW7sGc3XoDJWWP/pub",
       cats: ["Split-keyboards"],
