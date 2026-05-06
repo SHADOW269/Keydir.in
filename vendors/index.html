@@ -466,6 +466,9 @@ function render() {
         <a href="${v.url}" target="_blank" rel="noopener" class="btn-visit">VISIT<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11L11 1M11 1H5M11 1v6"/></svg></a>
       </div>
       <div class="vcard-badges">${badges}</div>
+      ${v.warning && v.warning_message
+        ? `<div style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;background:#fff0f0;border:2px solid var(--red);font-family:var(--f-m);font-size:.72rem;color:var(--red);line-height:1.5"><span style="flex-shrink:0">⚠</span><span>${v.warning_message}</span></div>`
+        : ""}
     `;
     g.appendChild(card);
   });
@@ -484,3 +487,6 @@ document.addEventListener("DOMContentLoaded", () => { buildCats(); render(); });
 </script>
 </body>
 </html>
+
+
+innerHTML
